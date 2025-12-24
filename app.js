@@ -156,6 +156,7 @@ function bindBookingForm() {
   showToast("Error saving booking", "error");
 });
     }); // closes addEventListener
+}   // closes bindBookingForm
 
 
 
