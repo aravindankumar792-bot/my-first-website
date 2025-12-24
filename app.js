@@ -34,7 +34,7 @@ const airportDrops = [
   { route: 'Chennai Airport → Puducherry drop', type: 'Prime SUV', price: 'Rs. 4500/-', extras: 'Toll gate charges extra price Rs. 200/-' }
 ];
 
-const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzxnDrfbGPdI9RDOVaVOQqdTXSqG3zQogxTKTl5-48EJXRNyMoxx76tntYoUtf32x3p/exec";
+const SHEET_API_URL = "https:https://script.google.com/macros/s/AKfycbzzruUC_oBy2hFWHwFhhldWnNP0e_fY5tdWzNqK6U7sHCKuWxHgbmbUbE_ntw4Y4tIS/exec";
 
 
 function showToast(message, type = 'success') {
@@ -123,13 +123,9 @@ function bindBookingForm() {
     }
     fetch(SHEET_API_URL, {
   method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
   body: JSON.stringify(data)
 })
 .then(() => {
-  // WhatsApp message
   const message =
     `🚕 *SB Travels & Transport Booking*\n\n` +
     `📍 Pickup: ${data.pickup}\n` +
@@ -141,10 +137,8 @@ function bindBookingForm() {
     `💰 Payment: ${data.payment}\n` +
     `📝 Notes: ${data.notes || 'None'}`;
 
-  const phoneNumber = "919629349482";
-
   window.open(
-    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+    `https://wa.me/919629349482?text=${encodeURIComponent(message)}`,
     "_blank"
   );
 
@@ -155,6 +149,7 @@ function bindBookingForm() {
   console.error(err);
   showToast("Error saving booking", "error");
 });
+
     }); // closes addEventListener
 }   // closes bindBookingForm
 
