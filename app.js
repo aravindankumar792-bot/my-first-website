@@ -37,6 +37,7 @@ const airportDrops = [
 const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzY4ZxXhx_k66aDpZh1QHMHoSTxYkx8LNO-E8BGCi3xJfRc7KQT2827IeTN8PIEEr0/exec";
 
 
+
 function showToast(message, type = 'success') {
   const el = document.getElementById('toast');
   el.textContent = message;
