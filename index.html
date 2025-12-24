@@ -1,11 +1,484 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SB Travels & Transport | Pondicherry & Tamil Nadu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>Welcome to My First Website</h1>
-    <p>This site is hosted on GitHub Pages.</p>
-    <p>Created by Aravindan</p>
+<body class="bg-slate-50 text-slate-900">
+  <header class="shadow-sm bg-white sticky top-0 z-30">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="Attached_image.png" alt="SB Travels & Transport logo" class="w-16 h-16 object-contain drop-shadow-sm">
+        <div class="font-bold text-xl text-slate-800 leading-tight">
+          <div class="text-purple-600">SB Travels & Transport</div>
+          <div class="text-xs font-semibold text-indigo-500">Auroville • Pondicherry • Tamil Nadu</div>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="tel:+919629349482" class="btn-secondary whitespace-nowrap">📞 +91 9629349482</a>
+        <a href="https://wa.me/919629349482" class="btn-primary whitespace-nowrap" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+      <button id="nav-toggle" class="md:hidden p-2 rounded-lg border border-slate-200 text-slate-700" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+    <nav id="nav-menu" class="hidden md:flex container mx-auto px-4 pb-3 gap-4 text-sm font-semibold text-slate-700 flex-wrap">
+      <a href="#home" class="hover:text-indigo-600 py-2">Home</a>
+      <a href="#fleet" class="hover:text-indigo-600 py-2">Fleet</a>
+      <a href="#pricing" class="hover:text-indigo-600 py-2">Pricing</a>
+      <a href="#services" class="hover:text-indigo-600 py-2">Services</a>
+      <a href="#booking" class="hover:text-indigo-600 py-2">Booking</a>
+      <a href="#how-it-works" class="hover:text-indigo-600 py-2">How it works</a>
+      <a href="#reviews" class="hover:text-indigo-600 py-2">Reviews</a>
+      <a href="#contact" class="hover:text-indigo-600 py-2">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home" class="space-y-12 pb-12">
+    <section class="bg-[#FFB300] text-slate-900">
+      <div class="container mx-auto px-4 py-10 md:py-14 grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-sm font-semibold">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Auroville_symbol.svg/200px-Auroville_symbol.svg.png" alt="Auroville Symbol" class="w-10 h-10 object-contain">
+            <span class="uppercase tracking-wide">Inspired by Auroville</span>
+          </div>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">Quality Vehicles. Skilled Drivers. Smooth Travel.</h1>
+          <p class="text-base md:text-lg max-w-2xl">Providing safe, comfortable, and on-time rides for every customer across Pondicherry, Auroville, and Tamil Nadu. Prime Sedans, SUVs, and Tempo Travellers — weekend pricing may vary.</p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="#booking" class="btn-primary text-center">Book Now</a>
+            <a href="tel:+919629349482" class="btn-secondary text-center">Call Now</a>
+          </div>
+          <div class="flex gap-3 text-sm font-semibold text-slate-800">
+            <div class="px-3 py-2 bg-white/70 rounded-lg shadow-sm">24/7 Support</div>
+            <div class="px-3 py-2 bg-white/70 rounded-lg shadow-sm">Airport Drops</div>
+            <div class="px-3 py-2 bg-white/70 rounded-lg shadow-sm">Corporate & Groups</div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg border border-amber-200">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <p class="text-sm font-semibold text-amber-600 uppercase tracking-wide">Quick Booking</p>
+              <h2 class="text-xl font-bold">Plan your ride in 1 minute</h2>
+            </div>
+            <img src="Attached_image.png" alt="SB Travels logo" class="w-16 h-16 object-contain drop-shadow-sm">
+          </div>
+          <form id="booking-form" class="space-y-3">
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div>
+                <label class="form-label">Pickup Location</label>
+                <input name="pickup" class="form-input" required placeholder="Eg. Pondy bus stand">
+              </div>
+              <div>
+                <label class="form-label">Drop-off Location</label>
+                <input name="drop" class="form-input" required placeholder="Eg. Chennai Airport">
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div>
+                <label class="form-label">Pickup Date & Time</label>
+                <div class="grid grid-cols-2 gap-2">
+                  <input name="pickupDate" type="date" class="form-input" required>
+                  <input name="pickupTime" type="time" class="form-input" required>
+                </div>
+              </div>
+              <div>
+                <label class="form-label">Return Date & Time <span class="text-xs text-slate-500">(optional)</span></label>
+                <div class="grid grid-cols-2 gap-2">
+                  <input name="returnDate" type="date" class="form-input">
+                  <input name="returnTime" type="time" class="form-input">
+                </div>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div>
+                <label class="form-label">Vehicle Type</label>
+                <select name="vehicle" id="vehicle-select" class="form-input" required>
+                  <option value="">Select vehicle</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">No. of Passengers</label>
+                <input name="passengers" type="number" min="1" class="form-input" required placeholder="3">
+              </div>
+            </div>
+            <div>
+              <label class="form-label">Payment Method</label>
+              <div class="flex gap-4 text-sm">
+                <label class="flex items-center gap-2"><input type="radio" name="payment" value="Cash on Trip" required class="form-checkbox">Cash on Trip</label>
+                <label class="flex items-center gap-2"><input type="radio" name="payment" value="Online Payment" class="form-checkbox">Online Payment</label>
+              </div>
+            </div>
+            <div>
+              <label class="form-label">Special Request (optional)</label>
+              <textarea name="notes" class="form-input" rows="2" placeholder="Child seat, extra pickup, etc."></textarea>
+            </div>
+            <div class="flex gap-3">
+              <button type="submit" class="btn-primary flex-1">Submit Booking</button>
+              <button type="button" id="booking-reset" class="btn-secondary">Clear</button>
+            </div>
+          </form>
+          <p class="text-xs text-slate-600 mt-3">Bookings are confirmed via call/WhatsApp with driver & vehicle details.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="fleet" class="container mx-auto px-4">
+      <div class="card">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="section-title">Fleet</h2>
+            <p class="text-sm text-slate-500">AC vehicles for every group size.</p>
+          </div>
+          <a href="#booking" class="btn-secondary text-sm">Book Now</a>
+        </div>
+        <div class="mb-6">
+          <h3 class="sub-title mb-3">Prime Sedan (4+1 Seater)</h3>
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="fleet-card">
+              <img src="images/toyota-etios.jpg" alt="Toyota Etios" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Etios/10623/1699957008000/front-left-side-47.jpg';">
+              <div class="p-4 space-y-2">
+                <h3 class="font-semibold text-slate-800">Toyota Etios</h3>
+                <p class="text-sm text-slate-600">4+1 Seater • AC • Comfortable</p>
+                <p class="text-sm text-slate-600">Perfect for city rides & airport transfers</p>
+                <div class="text-sm font-semibold text-indigo-600">From Rs. 1500</div>
+              </div>
+            </div>
+            <div class="fleet-card">
+              <img src="images/maruti-dzire.jpg" alt="Maruti Suzuki Dzire" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Dzire/10623/1699957008000/front-left-side-47.jpg';">
+              <div class="p-4 space-y-2">
+                <h3 class="font-semibold text-slate-800">Maruti Suzuki Dzire</h3>
+                <p class="text-sm text-slate-600">4+1 Seater • AC • Fuel Efficient</p>
+                <p class="text-sm text-slate-600">Ideal for local trips & outstation</p>
+                <div class="text-sm font-semibold text-indigo-600">From Rs. 1500</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="sub-title mb-3">Prime SUV (7+1 Seater)</h3>
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="fleet-card">
+              <img src="images/toyota-innova.jpg" alt="Toyota Innova" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Innova/10623/1699957008000/front-left-side-47.jpg';">
+              <div class="p-4 space-y-2">
+                <h3 class="font-semibold text-slate-800">Toyota Innova</h3>
+                <p class="text-sm text-slate-600">7+1 Seater • AC • Spacious</p>
+                <p class="text-sm text-slate-600">Comfortable for families & groups</p>
+                <div class="text-sm font-semibold text-indigo-600">From Rs. 2500</div>
+              </div>
+            </div>
+            <div class="fleet-card">
+              <img src="images/toyota-innova-crysta.jpg" alt="Toyota Innova Crysta" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Innova-Crysta/10623/1699957008000/front-left-side-47.jpg';">
+              <div class="p-4 space-y-2">
+                <h3 class="font-semibold text-slate-800">Toyota Innova Crysta</h3>
+                <p class="text-sm text-slate-600">7+1 Seater • Premium AC • Luxury</p>
+                <p class="text-sm text-slate-600">Premium comfort for long journeys</p>
+                <div class="text-sm font-semibold text-indigo-600">From Rs. 3000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="sub-title mb-3">Tempo Traveller (12+1 Seater)</h3>
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="fleet-card">
+              <img src="images/force-tempo-traveller.jpg" alt="Force Tempo Traveller" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Force/Tempo-Traveller/10623/1699957008000/front-left-side-47.jpg';">
+              <div class="p-4 space-y-2">
+                <h3 class="font-semibold text-slate-800">Force Tempo Traveller</h3>
+                <p class="text-sm text-slate-600">12+1 Seater • AC • Large Capacity</p>
+                <p class="text-sm text-slate-600">Perfect for group tours & events</p>
+                <div class="text-sm font-semibold text-indigo-600">Custom Pricing</div>
+              </div>
+            </div>
+            <div class="fleet-card">
+              <img src="images/force-tempo-traveller-silver.jpg" alt="Force Tempo Traveller Silver" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Force/Tempo-Traveller/10623/1699957008000/front-left-side-47.jpg';">
+              <div class="p-4 space-y-2">
+                <h3 class="font-semibold text-slate-800">Force Tempo Traveller</h3>
+                <p class="text-sm text-slate-600">12+1 Seater • Premium AC</p>
+                <p class="text-sm text-slate-600">Spacious & comfortable for large groups</p>
+                <div class="text-sm font-semibold text-indigo-600">Custom Pricing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-slate-500 mt-3">Weekend rates may vary. Toll/parking extra as per actuals.</p>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="container mx-auto px-4">
+      <div class="card">
+        <div class="text-center mb-6">
+          <h2 class="section-title mb-2">How It Works</h2>
+          <p class="text-sm text-slate-500">Simple 3-step booking</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="stat-card text-center">
+            <div class="stat-value">1</div>
+            <p class="stat-label">Select vehicle & enter trip details</p>
+          </div>
+          <div class="stat-card text-center">
+            <div class="stat-value">2</div>
+            <p class="stat-label">Confirm booking & choose payment</p>
+          </div>
+          <div class="stat-card text-center">
+            <div class="stat-value">3</div>
+            <p class="stat-label">Driver details shared • Trip begins</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="container mx-auto px-4">
+      <div class="card space-y-8">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="section-title">Pricing / Packages</h2>
+            <p class="text-sm text-slate-500">Transparent slabs for local, outstation, and airport rides.</p>
+          </div>
+          <span class="text-xs text-slate-500">Weekend prices may change.</span>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6 items-start">
+          <div class="lg:col-span-2 overflow-x-auto">
+            <h3 class="sub-title">Local Trip Rates</h3>
+            <table class="data-table" aria-label="Local trip slabs">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Slab</th>
+                  <th>Price</th>
+                  <th>Extras</th>
+                </tr>
+              </thead>
+              <tbody id="local-trip-body"></tbody>
+            </table>
+          </div>
+          <div class="card-sub">
+            <h3 class="sub-title">Outstation Per KM</h3>
+            <ul class="list-disc list-inside text-sm text-slate-700 space-y-1">
+              <li>Prime Sedan: Rs. 12/km (above 300 km: Rs. 14/km)</li>
+              <li>Prime SUV: Rs. 15/km (above 300 km: Rs. 22/km)</li>
+              <li>MUV Innova Crysta: Rs. 25/km (above 300 km: Rs. 30/km)</li>
+            </ul>
+            <p class="text-xs text-slate-500 mt-2">Toll/parking/state permit extra as actuals.</p>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="card-sub">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="sub-title">One-Day Tariff</h3>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="data-table" aria-label="One day tariff">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Tariff</th>
+                    <th>Per KM</th>
+                  </tr>
+                </thead>
+                <tbody id="tariff-body"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card-sub">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="sub-title">Airport / City Drops</h3>
+              <span class="text-xs text-slate-500">Toll varies by route</span>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="data-table" aria-label="Airport drops">
+                <thead>
+                  <tr>
+                    <th>Route</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Extras</th>
+                  </tr>
+                </thead>
+                <tbody id="airport-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container mx-auto px-4">
+      <div class="card">
+        <div class="text-center mb-6">
+          <h2 class="section-title mb-2">Services</h2>
+          <p class="text-sm text-slate-500">All rides are AC with trained drivers.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="stat-card">
+            <h3 class="font-semibold text-slate-800">Airport Transfers</h3>
+            <p class="text-sm text-slate-600">Chennai, Trichy, Bangalore, Pondy pickups & drops.</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="font-semibold text-slate-800">Local Hourly Rental</h3>
+            <p class="text-sm text-slate-600">City runs, meetings, errands with clear slabs.</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="font-semibold text-slate-800">Outstation Trips</h3>
+            <p class="text-sm text-slate-600">Intercity leisure, pilgrimages, and business travel.</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="font-semibold text-slate-800">Corporate Travel</h3>
+            <p class="text-sm text-slate-600">Contracts, events, and monthly billing support.</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="font-semibold text-slate-800">Group Travel</h3>
+            <p class="text-sm text-slate-600">Tempo Traveller for family tours and team outings.</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="font-semibold text-slate-800">Custom Packages</h3>
+            <p class="text-sm text-slate-600">Tailored itineraries with driver night allowances.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us" class="container mx-auto px-4">
+      <div class="card">
+        <div class="grid md:grid-cols-2 gap-6 items-start">
+          <div>
+            <h2 class="section-title mb-3">Why Choose Us</h2>
+            <ul class="list-disc list-inside text-sm text-slate-700 space-y-2">
+              <li>Experienced, trained, and courteous drivers</li>
+              <li>Safe & well-maintained vehicles with regular checks</li>
+              <li>24/7 customer support; instant WhatsApp updates</li>
+              <li>Affordable and transparent pricing</li>
+              <li>Verified reviews; trusted by families & corporates</li>
+              <li>Owner-led operations: <strong>Babu</strong></li>
+            </ul>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
+            <h3 class="font-semibold text-slate-800 mb-2">About SB Travel & Transport</h3>
+            <p class="text-sm text-slate-700">SB Travel & Transport is a reliable, customer-focused travel service based in Pondicherry and Tamil Nadu. We provide well-maintained Innova, Etios, Swift Dzire, and Tempo Travellers with trained drivers for airport transfers, outstation trips, local sightseeing, and corporate travel. Our mission is simple: make every journey safe, comfortable, and memorable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="container mx-auto px-4">
+      <div class="card">
+        <div class="text-center mb-6">
+          <h2 class="section-title mb-2">Customer Reviews</h2>
+          <p class="text-sm text-slate-500">Verified riders sharing their experience</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="booking-card">
+            <h4>Priya K.</h4>
+            <p class="text-yellow-500 text-sm">★★★★★</p>
+            <p class="text-sm text-slate-700 mt-2">Clean Innova, on-time pickup to Chennai airport. Driver was polite.</p>
+          </div>
+          <div class="booking-card">
+            <h4>Arun M.</h4>
+            <p class="text-yellow-500 text-sm">★★★★★</p>
+            <p class="text-sm text-slate-700 mt-2">Booked Tempo Traveller for family trip. AC was great and pricing was clear.</p>
+          </div>
+          <div class="booking-card">
+            <h4>Lisa D.</h4>
+            <p class="text-yellow-500 text-sm">★★★★☆</p>
+            <p class="text-sm text-slate-700 mt-2">Friendly driver and safe ride. Will book again for outstation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container mx-auto px-4">
+      <div class="card space-y-6">
+        <div class="text-center">
+          <h2 class="section-title mb-2">Contact & Quick Info</h2>
+          <p class="text-sm text-slate-500">Open 24 hours – 7 days a week</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 text-center">
+          <a href="tel:+919629349482" class="contact-card">
+            <div class="text-2xl mb-2">📞</div>
+            <div class="font-semibold text-slate-800">+91 9629349482</div>
+            <p class="text-xs text-slate-500">Click to call</p>
+          </a>
+          <a href="tel:+917092296252" class="contact-card">
+            <div class="text-2xl mb-2">📞</div>
+            <div class="font-semibold text-slate-800">+91 7092296252</div>
+            <p class="text-xs text-slate-500">Click to call</p>
+          </a>
+          <a href="tel:+919092364562" class="contact-card">
+            <div class="text-2xl mb-2">📞</div>
+            <div class="font-semibold text-slate-800">+91 9092364562</div>
+            <p class="text-xs text-slate-500">Click to call</p>
+          </a>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="card-sub">
+            <h3 class="sub-title">WhatsApp & Email</h3>
+            <p class="text-sm text-slate-700 mb-2"><a href="https://wa.me/919629349482" class="btn-secondary inline-block" target="_blank" rel="noreferrer">Chat on WhatsApp</a></p>
+            <p class="text-sm text-slate-700">Email: <a href="mailto:sbtraveltransport@gmail.com" class="text-indigo-600 underline">sbtraveltransport@gmail.com</a></p>
+          </div>
+          <div class="card-sub">
+            <h3 class="sub-title">Office Addresses</h3>
+            <p class="text-sm text-slate-700">SB Travel & Transport Service, Auroville Health Center Main Entrance, opp. aspirations road, Kuilapalayam, Bommayapalayam, Tamil Nadu - 605101.</p>
+            <p class="text-sm text-slate-700 mt-2">No. 19, Angalamman Koil Street, Alankuppam, Puducherry - 605111.</p>
+            <a class="text-indigo-600 underline text-sm" href="https://maps.app.goo.gl/M8UAADHLJ5tWjj9n8?g_st=aw" target="_blank" rel="noreferrer">View on Google Maps</a>
+          </div>
+        </div>
+        <div class="w-full">
+          <a href="https://maps.app.goo.gl/M8UAADHLJ5tWjj9n8?g_st=aw" target="_blank" rel="noreferrer" class="block w-full h-64 rounded-xl border border-slate-200 bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors">
+            <div class="text-center">
+              <div class="text-4xl mb-2">📍</div>
+              <p class="font-semibold text-slate-800">Click to view location on Google Maps</p>
+              <p class="text-sm text-slate-600 mt-1">Auroville Health Center, Kuilapalayam</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-white py-8 mt-10">
+    <div class="container mx-auto px-4 space-y-4 text-center">
+      <div class="flex items-center justify-center gap-3">
+        <img src="Attached_image.png" alt="SB Travels logo" class="w-14 h-14 object-contain opacity-90">
+        <div>
+          <p class="font-semibold text-white">SB Travels & Transport</p>
+          <p class="text-xs text-slate-300">© 2025 SB Travel & Transport. All Rights Reserved.</p>
+          <p class="text-xs text-slate-300">Designed & Developed by SB Travel</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-200">
+        <a href="#home" class="hover:text-amber-300">Home</a>
+        <a href="#services" class="hover:text-amber-300">Services</a>
+        <a href="#fleet" class="hover:text-amber-300">Fleet</a>
+        <a href="#pricing" class="hover:text-amber-300">Pricing</a>
+        <a href="#booking" class="hover:text-amber-300">Booking</a>
+        <a href="#contact" class="hover:text-amber-300">Contact Us</a>
+        <a href="#" class="hover:text-amber-300">Terms & Conditions</a>
+        <a href="#" class="hover:text-amber-300">Privacy Policy</a>
+        <a href="#" class="hover:text-amber-300">Refund & Cancellation Policy</a>
+        <a href="#" class="hover:text-amber-300">FAQ</a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-3 text-sm">
+        <a href="https://wa.me/919629349482" class="btn-secondary" target="_blank" rel="noreferrer">WhatsApp</a>
+        <a href="https://maps.app.goo.gl/M8UAADHLJ5tWjj9n8?g_st=aw" class="btn-secondary" target="_blank" rel="noreferrer">Google Maps</a>
+        <a href="#" class="btn-secondary">Facebook</a>
+        <a href="#" class="btn-secondary">Instagram</a>
+        <a href="#" class="btn-secondary">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
 </body>
 </html>
+
