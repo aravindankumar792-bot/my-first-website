@@ -34,6 +34,9 @@ const airportDrops = [
   { route: 'Chennai Airport → Puducherry drop', type: 'Prime SUV', price: 'Rs. 4500/-', extras: 'Toll gate charges extra price Rs. 200/-' }
 ];
 
+const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzY4ZxXhx_k66aDpZh1QHMHoSTxYkx8LNO-E8BGCi3xJfRc7KQT2827IeTN8PIEEr0/exec";
+
+
 function showToast(message, type = 'success') {
   const el = document.getElementById('toast');
   el.textContent = message;
@@ -118,13 +121,43 @@ function bindBookingForm() {
     if (!data.pickup || !data.drop || !data.pickupDate || !data.pickupTime || !data.vehicle || !data.passengers || !data.payment) {
       return showToast('Please fill all required fields', 'error');
     }
+    fetch(SHEET_API_URL, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(data)
+})
+.then(() => {
+  // WhatsApp message
+  const message =
+    `🚕 *SB Travels & Transport Booking*\n\n` +
+    `📍 Pickup: ${data.pickup}\n` +
+    `📍 Drop: ${data.drop}\n` +
+    `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
+    `🔁 Return: ${data.returnDate || 'N/A'} ${data.returnTime || ''}\n` +
+    `🚗 Vehicle: ${data.vehicle}\n` +
+    `👥 Passengers: ${data.passengers}\n` +
+    `💰 Payment: ${data.payment}\n` +
+    `📝 Notes: ${data.notes || 'None'}`;
 
-    form.reset();
-    showToast('Booking submitted. We will confirm on call/WhatsApp.');
-  });
+  const phoneNumber = "919629349482";
 
-  resetBtn?.addEventListener('click', () => form.reset());
-}
+  window.open(
+    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+
+  form.reset();
+  showToast("Booking saved & WhatsApp opened");
+})
+.catch(err => {
+  console.error(err);
+  showToast("Error saving booking", "error");
+});
+    }); // closes addEventListener
+
+
 
 function bindNavToggle() {
   const navToggle = document.getElementById('nav-toggle');
