@@ -34,8 +34,7 @@ const airportDrops = [
   { route: 'Chennai Airport → Puducherry drop', type: 'Prime SUV', price: 'Rs. 4500/-', extras: 'Toll gate charges extra price Rs. 200/-' }
 ];
 
-const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzY4ZxXhx_k66aDpZh1QHMHoSTxYkx8LNO-E8BGCi3xJfRc7KQT2827IeTN8PIEEr0/exec";
-
+const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzsY4ZxXhx_k66aDpZh1QHMHoSTxYkx8LNO-E8BGCi3xJfRc7KQT2827IeTN8PIEErO/exec";
 
 
 function showToast(message, type = 'success') {
