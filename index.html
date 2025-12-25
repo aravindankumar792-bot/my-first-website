@@ -118,16 +118,26 @@
               </div>
             </div>
             <div>
-              <label class="form-label">Payment Method</label>
-              <div class="flex gap-4 text-sm">
-                <label class="flex items-center gap-2"><input type="radio" name="payment" value="Cash on Trip" required class="form-checkbox">Cash on Trip</label>
-                <label class="flex items-center gap-2"><input type="radio" name="payment" value="Online Payment" class="form-checkbox">Online Payment</label>
-              </div>
-            </div>
-            <div>
-              <label class="form-label">Special Request (optional)</label>
-              <textarea name="notes" class="form-input" rows="2" placeholder="Child seat, extra pickup, etc."></textarea>
-            </div>
+  <label class="form-label">Payment Method</label>
+  <div class="flex gap-6 text-sm text-slate-700">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="payment" value="Cash on Trip" required class="w-4 h-4 accent-indigo-600">
+      <span>Cash on Trip</span>
+    </label>
+
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="payment" value="Online Payment" class="w-4 h-4 accent-indigo-600">
+      <span>Online Payment</span>
+    </label>
+  </div>
+</div>
+
+<div>
+  <label class="form-label">Special Request (optional)</label>
+  <textarea name="notes" class="form-input" rows="2"
+    placeholder="Child seat, extra pickup, etc."></textarea>
+</div>
+
             <div class="flex gap-3">
               <button type="submit" class="btn-primary flex-1">Submit Booking</button>
               <button type="button" id="booking-reset" class="btn-secondary">Clear</button>
