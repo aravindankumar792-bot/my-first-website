@@ -165,11 +165,11 @@
             <h2 class="section-title">Fleet</h2>
             <!-- Fleet Filter Tabs -->
 <div class="flex flex-wrap gap-2 mb-6">
-  <button class="fleet-tab active" onclick="filterFleet('all')">ALL</button>
-  <button class="fleet-tab" onclick="filterFleet('suv')">Prime SUV</button>
-  <button class="fleet-tab" onclick="filterFleet('sedan')">Prime Sedan</button>
-  <button class="fleet-tab" onclick="filterFleet('tempo')">TEMPO</button>
-  <button class="fleet-tab" onclick="filterFleet('bus')">BUS</button>
+  <button class="fleet-tab" onclick="filterFleet(event, 'all')">ALL</button>
+<button class="fleet-tab" onclick="filterFleet(event, 'suv')">Prime SUV</button>
+<button class="fleet-tab" onclick="filterFleet(event, 'sedan')">Prime Sedan</button>
+<button class="fleet-tab" onclick="filterFleet(event, 'tempo')">TEMPO</button>
+<button class="fleet-tab" onclick="filterFleet(event, 'bus')">BUS</button>
 </div>
 
             <p class="text-sm text-slate-500">AC vehicles for every group size.</p>
