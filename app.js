@@ -165,7 +165,7 @@ fetch(SHEET_API_URL, {
     `🚗 Vehicle: ${data.vehicle}\n` +
     `👥 Passengers: ${data.passengers}\n` +
     `💰 Payment: ${data.payment}\n` +
-    `💳 Advance Paid: ₹${data.advance}\n`
+    `💳 Advance Paid: ₹${data.advance}\n`+
     `📝 Notes: ${data.notes || 'None'}`;
 
   window.open(
