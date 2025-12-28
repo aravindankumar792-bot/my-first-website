@@ -219,5 +219,23 @@ function toggleSection(id, btn) {
     ? 'More'
     : 'Show Less';
 }
+function filterFleet(type) {
+  const cards = document.querySelectorAll('.fleet-card');
+  const tabs = document.querySelectorAll('.fleet-tab');
+
+  tabs.forEach(t => t.classList.remove('active'));
+
+  event.target.classList.add('active');
+
+  cards.forEach(card => {
+    if (type === 'all') {
+      card.style.display = 'block';
+    } else {
+      card.style.display =
+        card.dataset.category === type ? 'block' : 'none';
+    }
+  });
+}
+
 
 
