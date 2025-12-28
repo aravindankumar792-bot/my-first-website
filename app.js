@@ -120,26 +120,30 @@ function bindBookingForm() {
     if (!data.pickup || !data.drop || !data.pickupDate || !data.pickupTime || !data.vehicle || !data.passengers || !data.payment) {
       return showToast('Please fill all required fields', 'error');
     }
-    fetch(SHEET_API_URL, {
+    const params = new URLSearchParams();
+Object.keys(data).forEach(key => {
+  if (data[key] !== undefined && data[key] !== null) {
+    params.append(key, data[key]);
+  }
+});
+
+fetch(SHEET_API_URL, {
   method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(data)
+  body: params
 })
 .then(res => res.text())
 .then(result => {
   console.log("Server response:", result);
 
   const message =
-  `🚕 *SB Travels & Transport Booking*\n\n` +
-  `📍 Pickup: ${data.pickup}\n` +
-  `📍 Drop: ${data.drop}\n` +
-  `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
-  `🚗 Vehicle: ${data.vehicle}\n` +
-  `👥 Passengers: ${data.passengers}\n` +
-  `💰 Payment: ${data.payment}\n` +
-  `📝 Notes: ${data.notes || 'None'}`;
+    `🚕 *SB Travels & Transport Booking*\n\n` +
+    `📍 Pickup: ${data.pickup}\n` +
+    `📍 Drop: ${data.drop}\n` +
+    `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
+    `🚗 Vehicle: ${data.vehicle}\n` +
+    `👥 Passengers: ${data.passengers}\n` +
+    `💰 Payment: ${data.payment}\n` +
+    `📝 Notes: ${data.notes || 'None'}`;
 
   window.open(
     `https://wa.me/919629349482?text=${encodeURIComponent(message)}`,
