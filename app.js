@@ -132,15 +132,14 @@ function bindBookingForm() {
   console.log("Server response:", result);
 
   const message =
-    `🚕 *SB Travels & Transport Booking*\n\n` +
-    `📍 Pickup: ${data.pickup}\n` +
-    `📍 Drop: ${data.drop}\n` +
-    `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
-    `🔁 Return: ${data.returnDate || 'N/A'} ${data.returnTime || ''}\n` +
-    `🚗 Vehicle: ${data.vehicle}\n` +
-    `👥 Passengers: ${data.passengers}\n` +
-    `💰 Payment: ${data.payment}\n` +
-    `📝 Notes: ${data.notes || 'None'}`;
+  `🚕 *SB Travels & Transport Booking*\n\n` +
+  `📍 Pickup: ${data.pickup}\n` +
+  `📍 Drop: ${data.drop}\n` +
+  `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
+  `🚗 Vehicle: ${data.vehicle}\n` +
+  `👥 Passengers: ${data.passengers}\n` +
+  `💰 Payment: ${data.payment}\n` +
+  `📝 Notes: ${data.notes || 'None'}`;
 
   window.open(
     `https://wa.me/919629349482?text=${encodeURIComponent(message)}`,
