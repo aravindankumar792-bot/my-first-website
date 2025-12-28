@@ -117,8 +117,10 @@ function bindBookingForm() {
   vehicle: fd.get('vehicle'),
   passengers: fd.get('passengers'),
   payment: fd.get('payment'),
+  advance: fd.get('advance'),
   notes: fd.get('notes')?.trim()
 };
+
 
 
     if (
@@ -131,9 +133,10 @@ function bindBookingForm() {
   !data.pickupTime ||
   !data.vehicle ||
   !data.passengers ||
-  !data.payment
+  !data.payment ||
+  !data.advance
 ) {
-  return showToast('Please fill all required fields', 'error');
+  return showToast('Please fill all required fields including advance payment', 'error');
 }
 
     const params = new URLSearchParams();
@@ -162,6 +165,7 @@ fetch(SHEET_API_URL, {
     `🚗 Vehicle: ${data.vehicle}\n` +
     `👥 Passengers: ${data.passengers}\n` +
     `💰 Payment: ${data.payment}\n` +
+    `💳 Advance Paid: ₹${data.advance}\n`
     `📝 Notes: ${data.notes || 'None'}`;
 
   window.open(
