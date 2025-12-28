@@ -105,64 +105,86 @@ function bindBookingForm() {
 
   form.addEventListener('submit', e => {
     e.preventDefault();
+
     const fd = new FormData(form);
-    const message =
-  `🚕 *SB Travels & Transport Booking*\n\n` +
-  `👤 Name: ${data.name}\n` +
-  `📞 Mobile: ${data.mobile}\n` +
-  `📧 Email: ${data.email}\n\n` +
-  `📍 Pickup: ${data.pickup}\n` +
-  `📍 Drop: ${data.drop}\n` +
-  `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
-  `🚗 Vehicle: ${data.vehicle}\n` +
-  `👥 Passengers: ${data.passengers}\n` +
-  `💰 Payment: ${data.payment}\n` +
-  `💳 Advance Paid: ₹${data.advance}\n` +
-  `📝 Notes: ${data.notes || 'None'}`;
 
+    const data = {
+      name: fd.get('name')?.trim(),
+      mobile: fd.get('mobile')?.trim(),
+      email: fd.get('email')?.trim(),
+      pickup: fd.get('pickup')?.trim(),
+      drop: fd.get('drop')?.trim(),
+      pickupDate: fd.get('pickupDate'),
+      pickupTime: fd.get('pickupTime'),
+      vehicle: fd.get('vehicle'),
+      passengers: fd.get('passengers'),
+      payment: fd.get('payment'),
+      advance: fd.get('advance'),
+      notes: fd.get('notes')?.trim()
+    };
 
-
+    // validation
     if (
-  !data.name ||
-  !data.mobile ||
-  !data.email ||
-  !data.pickup ||
-  !data.drop ||
-  !data.pickupDate ||
-  !data.pickupTime ||
-  !data.vehicle ||
-  !data.passengers ||
-  !data.payment ||
-  !data.advance
-) {
-  return showToast('Please fill all required fields including advance payment', 'error');
-}
+      !data.name ||
+      !data.mobile ||
+      !data.email ||
+      !data.pickup ||
+      !data.drop ||
+      !data.pickupDate ||
+      !data.pickupTime ||
+      !data.vehicle ||
+      !data.passengers ||
+      !data.payment ||
+      !data.advance
+    ) {
+      showToast('Please fill all required fields including advance payment', 'error');
+      return;
+    }
 
     const params = new URLSearchParams();
-Object.keys(data).forEach(key => {
-  if (data[key] !== undefined && data[key] !== null) {
-    params.append(key, data[key]);
-  }
-});
+    Object.keys(data).forEach(key => {
+      params.append(key, data[key] || '');
+    });
 
-fetch(SHEET_API_URL, {
-  method: "POST",
-  mode: "no-cors",
-  body: params
-})
-.then(() => {
-  showToast("Booking saved (no-cors mode)");
-})
-.catch(err => {
-  console.error(err);
-  showToast("Fetch failed", "error");
-});
+    fetch(SHEET_API_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: params
+    })
+    .then(() => {
+      const message =
+        `🚕 *SB Travels & Transport Booking*\n\n` +
+        `👤 Name: ${data.name}\n` +
+        `📞 Mobile: ${data.mobile}\n` +
+        `📧 Email: ${data.email}\n\n` +
+        `📍 Pickup: ${data.pickup}\n` +
+        `📍 Drop: ${data.drop}\n` +
+        `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
+        `🚗 Vehicle: ${data.vehicle}\n` +
+        `👥 Passengers: ${data.passengers}\n` +
+        `💰 Payment: ${data.payment}\n` +
+        `💳 Advance Paid: ₹${data.advance}\n` +
+        `📝 Notes: ${data.notes || 'None'}`;
 
+      window.open(
+        `https://wa.me/919629349482?text=${encodeURIComponent(message)}`,
+        "_blank"
+      );
 
-    }); // closes addEventListener
-}   // closes bindBookingForm
+      form.reset();
+      showToast("Booking saved & WhatsApp opened");
+    })
+    .catch(err => {
+      console.error(err);
+      showToast("Booking failed", "error");
+    });
+  });
 
-
+  resetBtn.addEventListener('click', () => {
+    form.reset();
+    showToast("Form cleared");
+  });
+}
 
 function bindNavToggle() {
   const navToggle = document.getElementById('nav-toggle');
