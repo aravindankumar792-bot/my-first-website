@@ -250,6 +250,21 @@ function filterFleet(e, type) {
     }
   });
 }
+function goToBooking(vehicleName) {
+  const bookingSection = document.getElementById('booking');
+  const vehicleSelect = document.getElementById('vehicle-select');
+
+  if (vehicleSelect && vehicleName) {
+    vehicleSelect.value = vehicleName;
+  }
+
+  if (bookingSection) {
+    const yOffset = -90; // header height
+    const y = bookingSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+}
 
 
 
