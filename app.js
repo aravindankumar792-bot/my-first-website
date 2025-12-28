@@ -148,38 +148,17 @@ Object.keys(data).forEach(key => {
 
 fetch(SHEET_API_URL, {
   method: "POST",
+  mode: "no-cors",
   body: params
 })
-.then(res => res.text())
-.then(result => {
-  console.log("Server response:", result);
-
-  const message =
-    `🚕 *SB Travels & Transport Booking*\n\n` +
-    `👤 Name: ${data.name}\n` +
-    `📞 Mobile: ${data.mobile}\n` +
-    `📧 Email: ${data.email}\n\n` +
-    `📍 Pickup: ${data.pickup}\n` +
-    `📍 Drop: ${data.drop}\n` +
-    `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
-    `🚗 Vehicle: ${data.vehicle}\n` +
-    `👥 Passengers: ${data.passengers}\n` +
-    `💰 Payment: ${data.payment}\n` +
-    `💳 Advance Paid: ₹${data.advance}\n`+
-    `📝 Notes: ${data.notes || 'None'}`;
-
-  window.open(
-    `https://wa.me/919629349482?text=${encodeURIComponent(message)}`,
-    "_blank"
-  );
-
-  form.reset();
-  showToast("Booking saved & WhatsApp opened");
+.then(() => {
+  showToast("Booking saved (no-cors mode)");
 })
 .catch(err => {
-  console.error("FETCH ERROR:", err);
-  showToast("Error saving booking", "error");
+  console.error(err);
+  showToast("Fetch failed", "error");
 });
+
 
     }); // closes addEventListener
 }   // closes bindBookingForm
