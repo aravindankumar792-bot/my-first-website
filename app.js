@@ -121,9 +121,21 @@ function bindBookingForm() {
 };
 
 
-    if (!data.name || !data.mobile || !data.email |!data.pickup || !data.drop || !data.pickupDate || !data.pickupTime || !data.vehicle || !data.passengers || !data.payment) {
-      return showToast('Please fill all required fields', 'error');
-    }
+    if (
+  !data.name ||
+  !data.mobile ||
+  !data.email ||
+  !data.pickup ||
+  !data.drop ||
+  !data.pickupDate ||
+  !data.pickupTime ||
+  !data.vehicle ||
+  !data.passengers ||
+  !data.payment
+) {
+  return showToast('Please fill all required fields', 'error');
+}
+
     const params = new URLSearchParams();
 Object.keys(data).forEach(key => {
   if (data[key] !== undefined && data[key] !== null) {
@@ -210,25 +222,24 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
-function toggleSection(id, btn) {
-  const section = document.getElementById(id);
-  if (!section) return;
 
-  section.classList.toggle('hidden');
-  btn.textContent = section.classList.contains('hidden')
-    ? 'More'
-    : 'Show Less';
-}
-function filterFleet(type) {
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.fleet-card').forEach(card => {
+    card.classList.add('show');
+  });
+});
+
+
+  
+function filterFleet(e, type) {
   const cards = document.querySelectorAll('.fleet-card');
   const tabs = document.querySelectorAll('.fleet-tab');
 
   tabs.forEach(t => t.classList.remove('active'));
-  event.target.classList.add('active');
+  e.target.classList.add('active');
 
   cards.forEach(card => {
-    const match =
-      type === 'all' || card.dataset.category === type;
+    const match = type === 'all' || card.dataset.category === type;
 
     if (match) {
       card.classList.remove('hide');
@@ -239,6 +250,9 @@ function filterFleet(type) {
     }
   });
 }
+
+
+
 
 
 
