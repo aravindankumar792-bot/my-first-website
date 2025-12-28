@@ -163,6 +163,15 @@
         <div class="flex items-center justify-between mb-4">
           <div>
             <h2 class="section-title">Fleet</h2>
+            <!-- Fleet Filter Tabs -->
+<div class="flex flex-wrap gap-2 mb-6">
+  <button class="fleet-tab active" onclick="filterFleet('all')">ALL</button>
+  <button class="fleet-tab" onclick="filterFleet('suv')">Prime SUV</button>
+  <button class="fleet-tab" onclick="filterFleet('sedan')">Prime Sedan</button>
+  <button class="fleet-tab" onclick="filterFleet('tempo')">TEMPO</button>
+  <button class="fleet-tab" onclick="filterFleet('bus')">BUS</button>
+</div>
+
             <p class="text-sm text-slate-500">AC vehicles for every group size.</p>
           </div>
           <a href="#booking" class="btn-secondary text-sm">Book Now</a>
@@ -170,22 +179,24 @@
         <div class="mb-6">
           <h3 class="sub-title mb-3">Prime Sedan (4+1 Seater)</h3>
           <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="fleet-card">
+            <div class="fleet-card" data-category="sedan">
               <img src="images/toyota-etios.jpg" alt="Toyota Etios" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Etios/10623/1699957008000/front-left-side-47.jpg';">
               <div class="p-4 space-y-2">
                 <h3 class="font-semibold text-slate-800">Toyota Etios</h3>
                 <p class="text-sm text-slate-600">4+1 Seater • AC • Comfortable</p>
                 <p class="text-sm text-slate-600">Perfect for city rides & airport transfers</p>
                 <div class="text-sm font-semibold text-indigo-600">From Rs. 1500</div>
+                <a href="#booking" class="btn-primary text-center block mt-3">BOOK CAB</a>
               </div>
             </div>
-            <div class="fleet-card">
+            <div class="fleet-card" data-category="sedan">
               <img src="images/maruti-dzire.jpg" alt="Maruti Suzuki Dzire" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Dzire/10623/1699957008000/front-left-side-47.jpg';">
               <div class="p-4 space-y-2">
                 <h3 class="font-semibold text-slate-800">Maruti Suzuki Dzire</h3>
                 <p class="text-sm text-slate-600">4+1 Seater • AC • Fuel Efficient</p>
                 <p class="text-sm text-slate-600">Ideal for local trips & outstation</p>
                 <div class="text-sm font-semibold text-indigo-600">From Rs. 1500</div>
+                <a href="#booking" class="btn-primary text-center block mt-3">BOOK CAB</a>
               </div>
             </div>
           </div>
@@ -194,22 +205,24 @@
         <div class="mb-6">
           <h3 class="sub-title mb-3">Prime SUV (7+1 Seater)</h3>
           <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="fleet-card">
+            <div class="fleet-card" data-category="suv">
               <img src="images/toyota-innova.jpg" alt="Toyota Innova" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Innova/10623/1699957008000/front-left-side-47.jpg';">
               <div class="p-4 space-y-2">
                 <h3 class="font-semibold text-slate-800">Toyota Innova</h3>
                 <p class="text-sm text-slate-600">7+1 Seater • AC • Spacious</p>
                 <p class="text-sm text-slate-600">Comfortable for families & groups</p>
                 <div class="text-sm font-semibold text-indigo-600">From Rs. 2500</div>
+                <a href="#booking" class="btn-primary text-center block mt-3">BOOK CAB</a>
               </div>
             </div>
-            <div class="fleet-card">
+            <div class="fleet-card" data-category="suv">
               <img src="images/toyota-innova-crysta.jpg" alt="Toyota Innova Crysta" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Innova-Crysta/10623/1699957008000/front-left-side-47.jpg';">
               <div class="p-4 space-y-2">
                 <h3 class="font-semibold text-slate-800">Toyota Innova Crysta</h3>
                 <p class="text-sm text-slate-600">7+1 Seater • Premium AC • Luxury</p>
                 <p class="text-sm text-slate-600">Premium comfort for long journeys</p>
                 <div class="text-sm font-semibold text-indigo-600">From Rs. 3000</div>
+                <a href="#booking" class="btn-primary text-center block mt-3">BOOK CAB</a>
               </div>
             </div>
           </div>
@@ -218,22 +231,24 @@
         <div>
           <h3 class="sub-title mb-3">Tempo Traveller (12+1 Seater)</h3>
           <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="fleet-card">
+            <div class="fleet-card" data-category="tempo">
               <img src="images/force-tempo-traveller.jpg" alt="Force Tempo Traveller" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Force/Tempo-Traveller/10623/1699957008000/front-left-side-47.jpg';">
               <div class="p-4 space-y-2">
                 <h3 class="font-semibold text-slate-800">Force Tempo Traveller</h3>
                 <p class="text-sm text-slate-600">12+1 Seater • AC • Large Capacity</p>
                 <p class="text-sm text-slate-600">Perfect for group tours & events</p>
                 <div class="text-sm font-semibold text-indigo-600">Custom Pricing</div>
+                <a href="#booking" class="btn-primary text-center block mt-3">BOOK CAB</a>
               </div>
             </div>
-            <div class="fleet-card">
+            <div class="fleet-card" data-category="tempo">
               <img src="images/force-tempo-traveller-silver.jpg" alt="Force Tempo Traveller Silver" class="fleet-img" onerror="this.onerror=null; this.src='https://stimg.cardekho.com/images/carexteriorimages/930x620/Force/Tempo-Traveller/10623/1699957008000/front-left-side-47.jpg';">
               <div class="p-4 space-y-2">
                 <h3 class="font-semibold text-slate-800">Force Tempo Traveller</h3>
                 <p class="text-sm text-slate-600">12+1 Seater • Premium AC</p>
                 <p class="text-sm text-slate-600">Spacious & comfortable for large groups</p>
                 <div class="text-sm font-semibold text-indigo-600">Custom Pricing</div>
+                <a href="#booking" class="btn-primary text-center block mt-3">BOOK CAB</a>
               </div>
             </div>
           </div>
