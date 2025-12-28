@@ -224,18 +224,22 @@ function filterFleet(type) {
   const tabs = document.querySelectorAll('.fleet-tab');
 
   tabs.forEach(t => t.classList.remove('active'));
-
   event.target.classList.add('active');
 
   cards.forEach(card => {
-    if (type === 'all') {
-      card.style.display = 'block';
+    const match =
+      type === 'all' || card.dataset.category === type;
+
+    if (match) {
+      card.classList.remove('hide');
+      card.classList.add('show');
     } else {
-      card.style.display =
-        card.dataset.category === type ? 'block' : 'none';
+      card.classList.remove('show');
+      card.classList.add('hide');
     }
   });
 }
+
 
 
 
