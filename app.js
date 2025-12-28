@@ -106,20 +106,19 @@ function bindBookingForm() {
   form.addEventListener('submit', e => {
     e.preventDefault();
     const fd = new FormData(form);
-    const data = {
-  name: fd.get('name')?.trim(),
-  mobile: fd.get('mobile')?.trim(),
-  email: fd.get('email')?.trim(),
-  pickup: fd.get('pickup')?.trim(),
-  drop: fd.get('drop')?.trim(),
-  pickupDate: fd.get('pickupDate'),
-  pickupTime: fd.get('pickupTime'),
-  vehicle: fd.get('vehicle'),
-  passengers: fd.get('passengers'),
-  payment: fd.get('payment'),
-  advance: fd.get('advance'),
-  notes: fd.get('notes')?.trim()
-};
+    const message =
+  `🚕 *SB Travels & Transport Booking*\n\n` +
+  `👤 Name: ${data.name}\n` +
+  `📞 Mobile: ${data.mobile}\n` +
+  `📧 Email: ${data.email}\n\n` +
+  `📍 Pickup: ${data.pickup}\n` +
+  `📍 Drop: ${data.drop}\n` +
+  `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
+  `🚗 Vehicle: ${data.vehicle}\n` +
+  `👥 Passengers: ${data.passengers}\n` +
+  `💰 Payment: ${data.payment}\n` +
+  `💳 Advance Paid: ₹${data.advance}\n` +
+  `📝 Notes: ${data.notes || 'None'}`;
 
 
 
