@@ -37,6 +37,7 @@ const airportDrops = [
 const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzzruUC_oBy2hFWHwFhhldWnNP0e_fY5tdWzNqK6U7sHCKuWxHgbmbUbE_ntw4Y4tIS/exec";
 
 
+
 function showToast(message, type = 'success') {
   const el = document.getElementById('toast');
   el.textContent = message;
@@ -128,7 +129,10 @@ function bindBookingForm() {
   },
   body: JSON.stringify(data)
 })
-.then(() => {
+.then(res => res.text())
+.then(result => {
+  console.log("Server response:", result);
+
   const message =
     `🚕 *SB Travels & Transport Booking*\n\n` +
     `📍 Pickup: ${data.pickup}\n` +
@@ -149,7 +153,7 @@ function bindBookingForm() {
   showToast("Booking saved & WhatsApp opened");
 })
 .catch(err => {
-  console.error(err);
+  console.error("FETCH ERROR:", err);
   showToast("Error saving booking", "error");
 });
 
