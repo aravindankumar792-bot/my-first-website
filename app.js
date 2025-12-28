@@ -100,7 +100,21 @@ function populateVehicleOptions() {
 
 function bindBookingForm() {
   const form = document.getElementById('booking-form');
-  const resetBtn = document.getElementById('booking-reset');
+const resetBtn = document.getElementById('booking-reset');
+const paymentRadios = document.querySelectorAll('input[name="payment"]');
+const qrSection = document.getElementById('qr-section');
+  if (qrSection) {
+  paymentRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.value === 'Online Payment') {
+        qrSection.classList.remove('hidden');
+      } else {
+        qrSection.classList.add('hidden');
+      }
+    });
+  });
+}
+
   if (!form) return;
 
   form.addEventListener('submit', e => {
@@ -163,7 +177,7 @@ function bindBookingForm() {
         `🚗 Vehicle: ${data.vehicle}\n` +
         `👥 Passengers: ${data.passengers}\n` +
         `💰 Payment: ${data.payment}\n` +
-        `💳 Advance Paid: ₹${data.advance}\n` +
+        `💳 Advance Paid via QR: ₹${data.advance}\n`+
         `📝 Notes: ${data.notes || 'None'}`;
 
       window.open(
@@ -172,7 +186,8 @@ function bindBookingForm() {
       );
 
       form.reset();
-      showToast("Booking saved & WhatsApp opened");
+if (qrSection) qrSection.classList.add('hidden');
+showToast("Booking saved & WhatsApp opened");
     })
     .catch(err => {
       console.error(err);
