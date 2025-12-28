@@ -123,6 +123,9 @@ function bindBookingForm() {
     }
     fetch(SHEET_API_URL, {
   method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
   body: JSON.stringify(data)
 })
 .then(() => {
