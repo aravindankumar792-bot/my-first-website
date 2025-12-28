@@ -111,8 +111,6 @@ function bindBookingForm() {
       drop: fd.get('drop')?.trim(),
       pickupDate: fd.get('pickupDate'),
       pickupTime: fd.get('pickupTime'),
-      returnDate: fd.get('returnDate'),
-      returnTime: fd.get('returnTime'),
       vehicle: fd.get('vehicle'),
       passengers: fd.get('passengers'),
       payment: fd.get('payment'),
