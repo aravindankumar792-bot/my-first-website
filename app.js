@@ -107,17 +107,21 @@ function bindBookingForm() {
     e.preventDefault();
     const fd = new FormData(form);
     const data = {
-      pickup: fd.get('pickup')?.trim(),
-      drop: fd.get('drop')?.trim(),
-      pickupDate: fd.get('pickupDate'),
-      pickupTime: fd.get('pickupTime'),
-      vehicle: fd.get('vehicle'),
-      passengers: fd.get('passengers'),
-      payment: fd.get('payment'),
-      notes: fd.get('notes')?.trim()
-    };
+  name: fd.get('name')?.trim(),
+  mobile: fd.get('mobile')?.trim(),
+  email: fd.get('email')?.trim(),
+  pickup: fd.get('pickup')?.trim(),
+  drop: fd.get('drop')?.trim(),
+  pickupDate: fd.get('pickupDate'),
+  pickupTime: fd.get('pickupTime'),
+  vehicle: fd.get('vehicle'),
+  passengers: fd.get('passengers'),
+  payment: fd.get('payment'),
+  notes: fd.get('notes')?.trim()
+};
 
-    if (!data.pickup || !data.drop || !data.pickupDate || !data.pickupTime || !data.vehicle || !data.passengers || !data.payment) {
+
+    if (!data.name || !data.mobile || !data.email |!data.pickup || !data.drop || !data.pickupDate || !data.pickupTime || !data.vehicle || !data.passengers || !data.payment) {
       return showToast('Please fill all required fields', 'error');
     }
     const params = new URLSearchParams();
@@ -137,6 +141,9 @@ fetch(SHEET_API_URL, {
 
   const message =
     `🚕 *SB Travels & Transport Booking*\n\n` +
+    `👤 Name: ${data.name}\n` +
+    `📞 Mobile: ${data.mobile}\n` +
+    `📧 Email: ${data.email}\n\n` +
     `📍 Pickup: ${data.pickup}\n` +
     `📍 Drop: ${data.drop}\n` +
     `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
