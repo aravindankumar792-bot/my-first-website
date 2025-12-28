@@ -254,17 +254,27 @@ function goToBooking(vehicleName) {
   const bookingSection = document.getElementById('booking');
   const vehicleSelect = document.getElementById('vehicle-select');
 
+  // 1. Auto select vehicle
   if (vehicleSelect && vehicleName) {
     vehicleSelect.value = vehicleName;
+    vehicleSelect.dispatchEvent(new Event('change'));
   }
 
+  // 2. Smooth scroll to booking section
   if (bookingSection) {
-    const yOffset = -90; // header height
-    const y = bookingSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    bookingSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
 
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    // 3. Small highlight animation
+    bookingSection.classList.add('ring-4', 'ring-indigo-400');
+    setTimeout(() => {
+      bookingSection.classList.remove('ring-4', 'ring-indigo-400');
+    }, 1200);
   }
 }
+
 
 
 
