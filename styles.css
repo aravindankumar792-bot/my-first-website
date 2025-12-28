@@ -257,5 +257,19 @@ body {
     padding: 16px;
   }
 }
+.fleet-tab {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.fleet-tab.active {
+  background: #4f46e5;
+  color: #fff;
+}
+
 
 
