@@ -105,14 +105,10 @@ const paymentRadios = document.querySelectorAll('input[name="payment"]');
 const qrSection = document.getElementById('qr-section');
   if (qrSection) {
   paymentRadios.forEach(radio => {
-    radio.addEventListener('change', () => {
-      if (radio.value === 'Online Payment') {
-        qrSection.classList.remove('hidden');
-      } else {
-        qrSection.classList.add('hidden');
-      }
-    });
+  radio.addEventListener('change', () => {
+    qrSection.classList.remove('hidden');
   });
+});
 }
 
   if (!form) return;
