@@ -302,6 +302,21 @@ body {
   }
 }
 
+/* Pricing background */
+.pricing-bg {
+  background-image: url("images/pricing-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* White glass effect for pricing card */
+.pricing-bg .card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+}
 
 
 
