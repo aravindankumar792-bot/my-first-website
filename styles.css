@@ -317,6 +317,31 @@ body {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
 }
+/* Booking form background */
+.booking-bg {
+  background-image: url("images/booking-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Glass white layer for form content */
+.booking-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  z-index: 0;
+}
+
+/* Make form content above overlay */
+.booking-bg > * {
+  position: relative;
+  z-index: 1;
+}
 
 
 
