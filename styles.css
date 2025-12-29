@@ -376,4 +376,15 @@ body {
   color: #ea580c;
   font-weight: 600;
 }
+/* Advance payment note text */
+#qr-section p,
+#booking select + p {
+  color: #ea580c !important;   /* strong professional orange */
+  font-weight: 700;
+}
+
+/* "Submit Booking" word highlight */
+#qr-section strong {
+  color: #f97316 !important;   /* slightly brighter orange */
+}
 
