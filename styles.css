@@ -347,29 +347,33 @@ body {
   background-color: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(4px);
 }
-/* ===== Booking form text clarity fix ===== */
+/* ===== Booking form – Orange label clarity ===== */
 
-/* Form labels (Name, Mobile Number, etc.) */
+/* Labels like Name, Mobile Number, etc. */
 #booking .form-label {
-  color: #0f172a !important;   /* dark navy */
+  color: #ea580c !important;   /* professional orange */
   font-weight: 700;
 }
 
 /* Section heading */
-#booking h2,
+#booking h2 {
+  color: #ffffff;   /* heading white – already perfect */
+}
+
+/* Small helper texts */
 #booking p {
-  color: #0f172a;
+  color: #1f2937;
 }
 
-/* Input placeholder text */
+/* Placeholder text */
 #booking input::placeholder,
-#booking textarea::placeholder,
-#booking select {
-  color: #334155; /* dark grey */
+#booking textarea::placeholder {
+  color: #475569;
 }
 
-/* Radio button labels */
+/* Radio button text */
 #booking label span {
-  color: #0f172a;
+  color: #ea580c;
   font-weight: 600;
 }
+
