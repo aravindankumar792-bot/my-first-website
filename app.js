@@ -34,7 +34,7 @@ const airportDrops = [
   { route: 'Chennai Airport → Puducherry drop', type: 'Prime SUV', price: 'Rs. 4500/-', extras: 'Toll gate charges extra price Rs. 200/-' }
 ];
 
-const SHEET_API_URL = "https://script.google.com/macros/s/AKfycby_0_1vteH0f71uOkw3uDQckC3Wkn1fUcaYM45VtKhZPVd4qqOIDlhFBFcsc58nHguI/exec";
+const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzb2liqJFeg80sSAqPV2mFgwUQUe8ENxaUcgiabd-rQ9QLVT4V6KlfFSX7xh5KrsSo/exec";
 
 
 
@@ -157,38 +157,41 @@ const qrSection = document.getElementById('qr-section');
     });
 
     fetch(SHEET_API_URL, {
-      method: "POST",
-      body: params
-    })
-    .then(() => {
-      const message =
-        `🚕 *SB Travels & Transport Booking*\n\n` +
-        `👤 Name: ${data.name}\n` +
-        `📞 Mobile: ${data.mobile}\n` +
-        `📧 Email: ${data.email}\n\n` +
-        `📍 Pickup: ${data.pickup}\n` +
-        `📍 Drop: ${data.drop}\n` +
-        `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
-        `🚗 Vehicle: ${data.vehicle}\n` +
-        `👥 Passengers: ${data.passengers}\n` +
-        `💰 Payment: ${data.payment}\n` +
-        `💳 Advance Paid via QR: ₹${data.advance}\n`+
-        `📝 Notes: ${data.notes || 'None'}`;
+  method: "POST",
+  body: params
+})
+.then(res => res.text())
+.then(txt => {
+  console.log("Server response:", txt);
 
-      window.open(
-        `https://wa.me/919629349482?text=${encodeURIComponent(message)}`,
-        "_blank"
-      );
+  // WhatsApp message
+  const message =
+    `🚕 *SB Travels & Transport Booking*\n\n` +
+    `👤 Name: ${data.name}\n` +
+    `📞 Mobile: ${data.mobile}\n` +
+    `📧 Email: ${data.email}\n\n` +
+    `📍 Pickup: ${data.pickup}\n` +
+    `📍 Drop: ${data.drop}\n` +
+    `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
+    `🚗 Vehicle: ${data.vehicle}\n` +
+    `👥 Passengers: ${data.passengers}\n` +
+    `💰 Payment: ${data.payment}\n` +
+    `💳 Advance Paid: ₹${data.advance}\n` +
+    `📝 Notes: ${data.notes || 'None'}`;
 
-      form.reset();
-if (qrSection) qrSection.classList.add('hidden');
-showToast("Booking saved & WhatsApp opened");
-    })
-    .catch(err => {
-      console.error(err);
-      showToast("Booking failed", "error");
-    });
-  });
+  window.open(
+    `https://wa.me/919629349482?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+
+  form.reset();
+  if (qrSection) qrSection.classList.add('hidden');
+  showToast("Booking saved & WhatsApp opened");
+})
+.catch(err => {
+  console.error("FETCH ERROR:", err);
+  showToast("Booking failed", "error");
+});
 
   resetBtn.addEventListener('click', () => {
     form.reset();
