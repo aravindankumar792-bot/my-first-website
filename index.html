@@ -502,82 +502,42 @@ Balance amount payable during the trip.<strong>Submit Booking</strong>
     </div>
 
     <!-- Beaches -->
-    <h3 class="sub-title mb-4">Popular Beaches</h3>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8" id="beach-grid">
 
-      <div class="fleet-card">
-        <a href="images/rock-beach.jpg" target="_blank">
-  <img src="images/rock-beach.jpg" class="fleet-img cursor-pointer">
-</a>
-        <div class="p-4">
-          <h4 class="font-semibold">Rock Beach</h4>
-          <p class="text-sm text-slate-600">
-            Iconic promenade beach ideal for evening walks and sunrise views.
-          </p>
-        </div>
-      </div>
+  <!-- FIRST 3 (VISIBLE) -->
+  <div class="fleet-card beach-item show">
+    <!-- Rock Beach card (existing code) -->
+  </div>
 
-      <div class="fleet-card">
-        <a href="images/paradise-beach.jpg" target="_blank">
-  <img src="images/paradise-beach.jpg" class="fleet-img cursor-pointer">
-</a>
-        <div class="p-4">
-          <h4 class="font-semibold">Paradise Beach</h4>
-          <p class="text-sm text-slate-600">
-            Golden sand beach reached by boat, perfect for relaxation and photos.
-          </p>
-        </div>
-      </div>
+  <div class="fleet-card beach-item show">
+    <!-- Paradise Beach card (existing code) -->
+  </div>
 
-      <div class="fleet-card">
-        <a href="images/serenity-beach.jpg" target="_blank">
-  <img src="images/serenity-beach.jpg" class="fleet-img cursor-pointer">
-</a>
-        <div class="p-4">
-          <h4 class="font-semibold">Serenity Beach</h4>
-          <p class="text-sm text-slate-600">
-            Calm and peaceful beach popular for sunrise and fishing views.
-          </p>
-        </div>
-      </div>
+  <div class="fleet-card beach-item show">
+    <!-- Serenity Beach card (existing code) -->
+  </div>
 
-      <div class="fleet-card">
-        <a href="images/auroville-beach.jpg" target="_blank">
-  <img src="images/auroville-beach.jpg" class="fleet-img cursor-pointer">
-</a>
-        <div class="p-4">
-          <h4 class="font-semibold">Auroville Beach</h4>
-          <p class="text-sm text-slate-600">
-            Quiet beach near Auroville, ideal for morning walks and meditation.
-          </p>
-        </div>
-      </div>
+  <!-- NEXT 3 (HIDDEN INITIALLY) -->
+  <div class="fleet-card beach-item hidden slide-right">
+    <!-- Auroville Beach card (existing code) -->
+  </div>
 
-      <div class="fleet-card">
-        <a href="images/eden-beach.jpg" target="_blank">
-  <img src="images/eden-beach.jpg" class="fleet-img cursor-pointer">
-</a>
-        <div class="p-4">
-          <h4 class="font-semibold">Eden Beach</h4>
-          <p class="text-sm text-slate-600">
-            Blue Flag certified beach known for cleanliness and safety.
-          </p>
-        </div>
-      </div>
+  <div class="fleet-card beach-item hidden slide-right">
+    <!-- Eden Beach card (existing code) -->
+  </div>
 
-      <div class="fleet-card">
-        <a href="images/quiet-beach.jpg" target="_blank">
-  <img src="images/quiet-beach.jpg" class="fleet-img cursor-pointer">
-</a>
-        <div class="p-4">
-          <h4 class="font-semibold">Quiet Beach</h4>
-          <p class="text-sm text-slate-600">
-            Less crowded beach perfect for peaceful relaxation.
-          </p>
-        </div>
-      </div>
+  <div class="fleet-card beach-item hidden slide-right">
+    <!-- Quiet Beach card (existing code) -->
+  </div>
 
-    </div>
+</div>
+
+<div class="text-center mb-10">
+  <button onclick="toggleBeaches()" class="btn-secondary">
+    View More
+  </button>
+</div>
+
 
     <!-- Auroville -->
     <h3 class="sub-title mb-4">Auroville Attractions</h3>
