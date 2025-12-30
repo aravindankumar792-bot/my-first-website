@@ -502,38 +502,64 @@ Balance amount payable during the trip.<strong>Submit Booking</strong>
     </div>
 
     <!-- Beaches -->
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8" id="beach-grid">
+<h3 class="sub-title mb-4">Popular Beaches</h3>
 
-  <!-- FIRST 3 (VISIBLE) -->
+<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8" id="beach-grid">
+
+  <!-- ALWAYS VISIBLE -->
   <div class="fleet-card beach-item show">
-    <!-- Rock Beach card (existing code) -->
+    <img src="images/rock-beach.jpg" class="fleet-img">
+    <div class="p-4">
+      <h4 class="font-semibold">Rock Beach</h4>
+      <p class="text-sm text-slate-600">Iconic promenade beach.</p>
+    </div>
   </div>
 
   <div class="fleet-card beach-item show">
-    <!-- Paradise Beach card (existing code) -->
+    <img src="images/paradise-beach.jpg" class="fleet-img">
+    <div class="p-4">
+      <h4 class="font-semibold">Paradise Beach</h4>
+      <p class="text-sm text-slate-600">Golden sand beach reached by boat.</p>
+    </div>
   </div>
 
   <div class="fleet-card beach-item show">
-    <!-- Serenity Beach card (existing code) -->
+    <img src="images/serenity-beach.jpg" class="fleet-img">
+    <div class="p-4">
+      <h4 class="font-semibold">Serenity Beach</h4>
+      <p class="text-sm text-slate-600">Peaceful sunrise beach.</p>
+    </div>
   </div>
 
-  <!-- NEXT 3 (HIDDEN INITIALLY) -->
-  <div class="fleet-card beach-item hidden slide-right">
-    <!-- Auroville Beach card (existing code) -->
+  <!-- HIDDEN INITIALLY -->
+  <div class="fleet-card beach-item hidden">
+    <img src="images/auroville-beach.jpg" class="fleet-img">
+    <div class="p-4">
+      <h4 class="font-semibold">Auroville Beach</h4>
+      <p class="text-sm text-slate-600">Quiet beach near Auroville.</p>
+    </div>
   </div>
 
-  <div class="fleet-card beach-item hidden slide-right">
-    <!-- Eden Beach card (existing code) -->
+  <div class="fleet-card beach-item hidden">
+    <img src="images/eden-beach.jpg" class="fleet-img">
+    <div class="p-4">
+      <h4 class="font-semibold">Eden Beach</h4>
+      <p class="text-sm text-slate-600">Blue Flag certified beach.</p>
+    </div>
   </div>
 
-  <div class="fleet-card beach-item hidden slide-right">
-    <!-- Quiet Beach card (existing code) -->
+  <div class="fleet-card beach-item hidden">
+    <img src="images/quiet-beach.jpg" class="fleet-img">
+    <div class="p-4">
+      <h4 class="font-semibold">Quiet Beach</h4>
+      <p class="text-sm text-slate-600">Less crowded peaceful beach.</p>
+    </div>
   </div>
 
 </div>
 
 <div class="text-center mb-10">
-  <button onclick="toggleBeaches()" class="btn-secondary">
+  <button onclick="toggleBeaches()" class="btn-secondary" id="beachToggleBtn">
     View More
   </button>
 </div>
