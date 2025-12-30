@@ -309,6 +309,30 @@ function toggleBeaches() {
 
   beachesExpanded = !beachesExpanded;
 }
+const sectionState = {
+  beach: false,
+  auroville: false,
+  temple: false,
+  church: false
+};
+
+function toggleSection(section) {
+  const items = document.querySelectorAll(`.${section}-item`);
+  const btn = document.getElementById(`${section}ToggleBtn`);
+
+  items.forEach((item, index) => {
+    if (index >= 3) {
+      if (sectionState[section]) {
+        item.classList.add('hidden');   // VIEW LESS
+      } else {
+        item.classList.remove('hidden'); // VIEW MORE
+      }
+    }
+  });
+
+  btn.textContent = sectionState[section] ? "View More" : "View Less";
+  sectionState[section] = !sectionState[section];
+}
 
 
 
