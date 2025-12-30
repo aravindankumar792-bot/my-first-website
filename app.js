@@ -288,16 +288,26 @@ function goToBooking(vehicleName) {
     }, 1200);
   }
 }
-function toggleBeaches() {
-  const items = document.querySelectorAll('.beach-item.hidden');
-  const btn = document.getElementById('beachToggleBtn');
+let beachesExpanded = false;
 
-  items.forEach(item => {
-    item.classList.toggle('hidden');
+function toggleBeaches() {
+  const hiddenBeaches = document.querySelectorAll('.beach-item');
+
+  hiddenBeaches.forEach((item, index) => {
+    // First 3 always visible
+    if (index >= 3) {
+      if (beachesExpanded) {
+        item.classList.add('hidden');   // HIDE
+      } else {
+        item.classList.remove('hidden'); // SHOW
+      }
+    }
   });
 
-  btn.textContent =
-    btn.textContent === "View More" ? "View Less" : "View More";
+  const btn = document.getElementById('beachToggleBtn');
+  btn.textContent = beachesExpanded ? "View More" : "View Less";
+
+  beachesExpanded = !beachesExpanded;
 }
 
 
