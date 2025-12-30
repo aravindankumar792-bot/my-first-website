@@ -158,13 +158,13 @@ const qrSection = document.getElementById('qr-section');
 
     fetch(SHEET_API_URL, {
   method: "POST",
+  mode: "cors",
   body: params
 })
 .then(res => res.text())
 .then(txt => {
   console.log("Server response:", txt);
 
-  // WhatsApp message
   const message =
     `🚕 *SB Travels & Transport Booking*\n\n` +
     `👤 Name: ${data.name}\n` +
