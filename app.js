@@ -288,6 +288,18 @@ function goToBooking(vehicleName) {
     }, 1200);
   }
 }
+function toggleBeaches() {
+  const hiddenItems = document.querySelectorAll('.beach-item.hidden');
+
+  hiddenItems.forEach((item, index) => {
+    item.classList.remove('hidden');
+    setTimeout(() => {
+      item.classList.add('show');
+    }, index * 100);
+  });
+
+  event.target.style.display = 'none';
+}
 
 
 
