@@ -333,6 +333,22 @@ function toggleSection(section) {
   btn.textContent = sectionState[section] ? "View More" : "View Less";
   sectionState[section] = !sectionState[section];
 }
+function toggleSection(type) {
+  const items = document.querySelectorAll(`.${type}-item`);
+  const btn = document.getElementById(`${type}ToggleBtn`);
+  let hiddenFound = false;
+
+  items.forEach(item => {
+    if (item.classList.contains('hidden')) {
+      item.classList.remove('hidden');
+      hiddenFound = true;
+    } else if (!hiddenFound) {
+      item.classList.add('hidden');
+    }
+  });
+
+  btn.textContent = hiddenFound ? "View Less" : "View More";
+}
 
 
 
