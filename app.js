@@ -289,17 +289,17 @@ function goToBooking(vehicleName) {
   }
 }
 function toggleBeaches() {
-  const hiddenItems = document.querySelectorAll('.beach-item.hidden');
+  const items = document.querySelectorAll('.beach-item.hidden');
+  const btn = document.getElementById('beachToggleBtn');
 
-  hiddenItems.forEach((item, index) => {
-    item.classList.remove('hidden');
-    setTimeout(() => {
-      item.classList.add('show');
-    }, index * 100);
+  items.forEach(item => {
+    item.classList.toggle('hidden');
   });
 
-  event.target.style.display = 'none';
+  btn.textContent =
+    btn.textContent === "View More" ? "View Less" : "View More";
 }
+
 
 
 
