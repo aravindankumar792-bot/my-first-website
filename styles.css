@@ -387,4 +387,19 @@ body {
 #qr-section strong {
   color: #f97316 !important;   /* slightly brighter orange */
 }
+/* Tourist places view more animation */
+.slide-right {
+  transform: translateX(40px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.slide-right.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
 
