@@ -158,7 +158,6 @@ const qrSection = document.getElementById('qr-section');
 
     fetch(SHEET_API_URL, {
       method: "POST",
-      mode: "no-cors",
       body: params
     })
     .then(() => {
