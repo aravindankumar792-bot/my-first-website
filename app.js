@@ -100,18 +100,20 @@ function populateVehicleOptions() {
 
 function bindBookingForm() {
   const form = document.getElementById('booking-form');
-const resetBtn = document.getElementById('booking-reset');
-const paymentRadios = document.querySelectorAll('input[name="payment"]');
-const qrSection = document.getElementById('qr-section');
-  if (qrSection) {
-  paymentRadios.forEach(radio => {
-  radio.addEventListener('change', () => {
-    qrSection.classList.remove('hidden');
-  });
-});
-}
+  const resetBtn = document.getElementById('booking-reset');
+  const paymentRadios = document.querySelectorAll('input[name="payment"]');
+  const qrSection = document.getElementById('qr-section');
 
   if (!form) return;
+
+  // Show QR when payment selected
+  if (qrSection) {
+    paymentRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        qrSection.classList.remove('hidden');
+      });
+    });
+  }
 
   form.addEventListener('submit', e => {
     e.preventDefault();
@@ -133,7 +135,6 @@ const qrSection = document.getElementById('qr-section');
       notes: fd.get('notes')?.trim()
     };
 
-    // validation
     if (
       !data.name ||
       !data.mobile ||
@@ -152,52 +153,48 @@ const qrSection = document.getElementById('qr-section');
     }
 
     const params = new URLSearchParams();
-    Object.keys(data).forEach(key => {
-      params.append(key, data[key] || '');
-    });
+    Object.keys(data).forEach(k => params.append(k, data[k]));
 
     fetch(SHEET_API_URL, {
-  method: "POST",
-  mode: "cors",
-  body: params
-})
-.then(res => res.text())
-.then(txt => {
-  console.log("Server response:", txt);
+      method: "POST",
+      mode: "cors",
+      body: params
+    })
+    .then(res => res.text())
+    .then(() => {
+      const message =
+        `🚕 *SB Travels & Transport Booking*\n\n` +
+        `👤 Name: ${data.name}\n` +
+        `📞 Mobile: ${data.mobile}\n` +
+        `📧 Email: ${data.email}\n\n` +
+        `📍 Pickup: ${data.pickup}\n` +
+        `📍 Drop: ${data.drop}\n` +
+        `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
+        `🚗 Vehicle: ${data.vehicle}\n` +
+        `👥 Passengers: ${data.passengers}\n` +
+        `💰 Payment: ${data.payment}\n` +
+        `💳 Advance Paid: ₹${data.advance}\n` +
+        `📝 Notes: ${data.notes || 'None'}`;
 
-  const message =
-    `🚕 *SB Travels & Transport Booking*\n\n` +
-    `👤 Name: ${data.name}\n` +
-    `📞 Mobile: ${data.mobile}\n` +
-    `📧 Email: ${data.email}\n\n` +
-    `📍 Pickup: ${data.pickup}\n` +
-    `📍 Drop: ${data.drop}\n` +
-    `🗓 Pickup: ${data.pickupDate} ${data.pickupTime}\n` +
-    `🚗 Vehicle: ${data.vehicle}\n` +
-    `👥 Passengers: ${data.passengers}\n` +
-    `💰 Payment: ${data.payment}\n` +
-    `💳 Advance Paid: ₹${data.advance}\n` +
-    `📝 Notes: ${data.notes || 'None'}`;
+      window.open(
+        `https://wa.me/919629349482?text=${encodeURIComponent(message)}`,
+        "_blank"
+      );
 
-  window.open(
-    `https://wa.me/919629349482?text=${encodeURIComponent(message)}`,
-    "_blank"
-  );
-
-  form.reset();
-  if (qrSection) qrSection.classList.add('hidden');
-  showToast("Booking saved & WhatsApp opened");
-})
-.catch(err => {
-  console.error("FETCH ERROR:", err);
-  showToast("Booking failed", "error");
-});
+      form.reset();
+      if (qrSection) qrSection.classList.add('hidden');
+      showToast("Booking saved & WhatsApp opened");
+    })
+    .catch(() => showToast("Booking failed", "error"));
+  });
 
   resetBtn.addEventListener('click', () => {
     form.reset();
+    if (qrSection) qrSection.classList.add('hidden');
     showToast("Form cleared");
   });
 }
+
 
 function bindNavToggle() {
   const navToggle = document.getElementById('nav-toggle');
