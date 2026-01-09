@@ -132,6 +132,30 @@ function bindBookingForm() {
       .then(() => {
         showToast("Booking sent successfully");
       })
+      .then(() => {
+
+  const message =
+    `SB Travels & Transport Booking\n\n` +
+    `Name: ${data.name}\n` +
+    `Mobile: ${data.mobile}\n` +
+    `Email: ${data.email}\n` +
+    `Pickup: ${data.pickup}\n` +
+    `Drop: ${data.drop}\n` +
+    `Date & Time: ${data.pickupDate} ${data.pickupTime}\n` +
+    `Vehicle: ${data.vehicle}\n` +
+    `Passengers: ${data.passengers}\n` +
+    `Payment: ${data.payment}\n` +
+    `Advance: ₹${data.advance}\n` +
+    `Notes: ${data.notes || "None"}`;
+
+  // OPEN WHATSAPP
+  window.open(
+    "https://wa.me/919629349482?text=" + encodeURIComponent(message),
+    "_blank"
+  );
+
+  showToast("Booking Saved & WhatsApp Opened");
+})
       .catch(() => showToast("Failed to send booking", "error"));
   });
 
