@@ -1,42 +1,45 @@
+/* =========================================
+   GLOBAL BASE STYLES
+========================================= */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #0f172a;
 }
 
-.card {
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  padding: 18px;
-  box-shadow: 0 10px 35px -20px rgba(15, 23, 42, 0.3);
-}
-
-.card-sub {
+/* Cards */
+.card,
+.card-sub,
+.booking-card,
+.stat-card,
+.contact-card {
   background: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 14px;
+  box-shadow: 0 12px 30px -18px rgba(15, 23, 42, 0.4);
 }
 
+/* Headings */
 .section-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #0f172a;
 }
 
 .sub-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #1e293b;
   margin-bottom: 8px;
 }
 
+/* =========================================
+   TABLES
+========================================= */
 .data-table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
+  background: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .data-table thead {
@@ -47,7 +50,6 @@ body {
 .data-table td {
   padding: 10px 12px;
   border-bottom: 1px solid #e2e8f0;
-  text-align: left;
   font-size: 0.92rem;
 }
 
@@ -55,6 +57,9 @@ body {
   background: #f1f5f9;
 }
 
+/* =========================================
+   FORM ELEMENTS
+========================================= */
 .form-card {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
@@ -66,17 +71,19 @@ body {
   display: block;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #475569;
   margin-bottom: 4px;
+  color: #475569;
 }
 
-.form-input {
+.form-input,
+select,
+textarea {
+  box-sizing: border-box;
   width: 100%;
   border: 1px solid #cbd5e1;
   border-radius: 8px;
   padding: 10px 12px;
   font-size: 0.95rem;
-  color: #0f172a;
   background: #fff;
 }
 
@@ -85,48 +92,47 @@ body {
   outline-offset: 1px;
 }
 
-.form-checkbox {
-  width: 16px;
-  height: 16px;
-  accent-color: #4f46e5;
-}
-
+/* =========================================
+   BUTTONS
+========================================= */
 .btn-primary {
   background: linear-gradient(120deg, #4f46e5, #6366f1);
   color: #fff;
   padding: 10px 14px;
   border-radius: 10px;
   font-weight: 700;
-  font-size: 0.95rem;
   border: none;
   box-shadow: 0 8px 25px -12px rgba(99, 102, 241, 0.8);
 }
 
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
 .btn-secondary {
   background: #e2e8f0;
-  color: #0f172a;
   padding: 10px 14px;
   border-radius: 10px;
   font-weight: 700;
-  font-size: 0.95rem;
-  border: none;
 }
 
-.btn-link {
-  color: #4f46e5;
-  font-weight: 700;
+.btn-secondary:hover {
+  background: #cbd5e1;
 }
 
+/* =========================================
+   TOAST NOTIFICATION
+========================================= */
 .toast {
   position: fixed;
   bottom: 16px;
   right: 16px;
-  background: #0f172a;
-  color: #fff;
   padding: 12px 14px;
   border-radius: 10px;
+  background: #0f172a;
+  color: #fff;
   box-shadow: 0 12px 40px -18px rgba(15, 23, 42, 0.8);
-  z-index: 50;
+  z-index: 9999;
 }
 
 .toast.success {
@@ -137,30 +143,18 @@ body {
   background: #dc2626;
 }
 
-.stat-card {
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 12px;
-  background: #f8fafc;
+.hidden {
+  display: none;
 }
 
-.stat-label {
-  font-size: 0.85rem;
-  color: #475569;
-}
-
-.stat-value {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: #0f172a;
-}
-
+/* =========================================
+   FLEET CARDS
+========================================= */
 .fleet-card {
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 12px 30px -18px rgba(15, 23, 42, 0.4);
+  transition: all 0.35s ease;
 }
 
 .fleet-img {
@@ -170,224 +164,80 @@ body {
   background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
 }
 
-.fleet-img[src=""],
-.fleet-img:not([src]) {
-  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.fleet-img[src=""]::after,
-.fleet-img:not([src])::after {
-  content: "🚗";
-  font-size: 3rem;
-  opacity: 0.3;
-}
-
-.booking-card {
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 12px;
-  background: #fff;
-  box-shadow: 0 12px 30px -18px rgba(15, 23, 42, 0.4);
-}
-
-.booking-card h4 {
-  font-weight: 700;
-  color: #0f172a;
-}
-
-.booking-status {
-  padding: 4px 8px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.booking-status.pending {
-  background: #fef3c7;
-  color: #92400e;
-}
-
-.booking-status.confirmed {
-  background: #dcfce7;
-  color: #166534;
-}
-
-.booking-status.cancelled {
-  background: #fee2e2;
-  color: #991b1b;
-}
-
-.contact-card {
-  border: 2px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 20px;
-  background: #f8fafc;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-}
-
-.contact-card:hover {
-  background: #f1f5f9;
-  border-color: #4f46e5;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px -10px rgba(79, 70, 229, 0.4);
-}
-
-@media (max-width: 768px) {
-  #nav-menu {
-    border-top: 1px solid #e2e8f0;
-    background: white;
-  }
-  
-  #nav-menu a {
-    display: block;
-    padding: 12px 16px;
-    border-bottom: 1px solid #f1f5f9;
-  }
-  
-  #nav-menu a:last-child {
-    border-bottom: none;
-  }
-  
-  .contact-card {
-    padding: 16px;
-  }
-}
-.fleet-tab {
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: #e2e8f0;
-  font-weight: 700;
-  font-size: 0.85rem;
-  cursor: pointer;
-}
-
-.fleet-tab.active {
-  background: #4f46e5;
-  color: #fff;
-}
-/* Fleet animation */
-.fleet-card {
-  transition: all 0.35s ease;
-}
-
 .fleet-card.hide {
   opacity: 0;
   transform: scale(0.95);
-  pointer-events: none;
   visibility: hidden;
 }
 
 .fleet-card.show {
   opacity: 1;
   transform: scale(1);
-  position: relative;
-}
-#booking:target {
-  animation: pop 0.4s ease;
 }
 
-@keyframes pop {
-  from {
-    transform: scale(0.97);
-    opacity: 0.8;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+/* Tabs */
+.fleet-tab {
+  padding: 8px 14px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
 }
 
-/* Pricing background */
-.pricing-bg {
-  background-image: url("images/pricing-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 40px;
-  padding-bottom: 40px;
+.fleet-tab.active {
+  background: #4f46e5;
+  color: #fff;
 }
 
-/* White glass effect for pricing card */
-.pricing-bg .card {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(6px);
-}
-/* Booking background with clear image + readable text */
+/* =========================================
+   BOOKING SECTION OVERLAY FIXED
+========================================= */
 .booking-bg {
   position: relative;
   background-image: url("images/booking-bg.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   overflow: hidden;
 }
 
-/* Dark overlay for text clarity */
+/* Dark overlay */
 .booking-bg::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* adjust darkness here */
+  background: rgba(0, 0, 0, 0.35);
   z-index: 0;
 }
 
-/* Bring form content above overlay */
-.booking-bg {
+/* Ensure form clickable on top */
+#booking * {
   position: relative;
-  background-image: url("images/booking-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(4px);
+  z-index: 2;
 }
-/* ===== Booking form – Orange label clarity ===== */
 
-/* Labels like Name, Mobile Number, etc. */
+#booking form {
+  z-index: 5;
+}
+
+/* Orange label color */
 #booking .form-label {
-  color: #ea580c !important;   /* professional orange */
+  color: #ea580c !important;
   font-weight: 700;
 }
 
-/* Section heading */
-#booking h2 {
-  color: #ffffff;   /* heading white – already perfect */
-}
-
-/* Small helper texts */
-#booking p {
-  color: #1f2937;
-}
-
-/* Placeholder text */
-#booking input::placeholder,
-#booking textarea::placeholder {
-  color: #475569;
-}
-
-/* Radio button text */
-#booking label span {
-  color: #ea580c;
-  font-weight: 600;
-}
-/* Advance payment note text */
 #qr-section p,
 #booking select + p {
-  color: #ea580c !important;   /* strong professional orange */
+  color: #ea580c !important;
   font-weight: 700;
 }
 
-/* "Submit Booking" word highlight */
 #qr-section strong {
-  color: #f97316 !important;   /* slightly brighter orange */
+  color: #f97316 !important;
 }
-/* Tourist places view more animation */
+
+/* =========================================
+   TOURIST PLACES ANIMATION
+========================================= */
 .slide-right {
   transform: translateX(40px);
   opacity: 0;
@@ -398,20 +248,29 @@ body {
   transform: translateX(0);
   opacity: 1;
 }
-.btn-primary:hover {
-  filter: brightness(1.1);
+
+/* =========================================
+   RESPONSIVE STYLES
+========================================= */
+@media (max-width: 768px) {
+  #nav-menu {
+    border-top: 1px solid #e2e8f0;
+    background: #fff;
+  }
+
+  #nav-menu a {
+    display: block;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .contact-card {
+    padding: 16px;
+  }
 }
 
-.btn-secondary:hover {
-  background: #cbd5e1;
-}
 @media (max-width: 480px) {
   .form-input {
     padding: 8px 10px;
   }
 }
-
-.hidden {
-  display: none;
-}
-
