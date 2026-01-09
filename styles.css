@@ -279,7 +279,7 @@ body {
   opacity: 0;
   transform: scale(0.95);
   pointer-events: none;
-  position: absolute;
+  visibility: hidden;
 }
 
 .fleet-card.show {
@@ -337,13 +337,13 @@ body {
 }
 
 /* Bring form content above overlay */
-.booking-bg > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Glass effect for form card */
 .booking-bg {
+  position: relative;
+  background-image: url("images/booking-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
   background-color: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(4px);
 }
@@ -397,6 +397,18 @@ body {
 .slide-right.show {
   transform: translateX(0);
   opacity: 1;
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn-secondary:hover {
+  background: #cbd5e1;
+}
+@media (max-width: 480px) {
+  .form-input {
+    padding: 8px 10px;
+  }
 }
 
 .hidden {
