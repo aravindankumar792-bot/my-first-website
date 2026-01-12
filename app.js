@@ -4,8 +4,9 @@ const vehicles = [
   { id: 'v3', name: 'Maruti Suzuki Ertiga (Prime SUV)', seats: 7, ac: true },
   { id: 'v4', name: 'Toyota Innova Crysta (Prime SUV)', seats: 7, ac: true },
   { id: 'v5', name: 'Toyota Innova (Prime SUV)', seats: 7, ac: true },
-  { id: 'v6', name: 'Benze Tempo Traveller (12+1)', seats: 12, ac: true },
-  { id: 'v7', name: 'Force Tempo Traveller (12+1)', seats: 12, ac: true }
+  { id: 'v6', name: 'Benze Tempo Traveller (11+1)', seats: 12, ac: true },
+  { id: 'v7', name: 'Force Tempo Traveller (11+1)', seats: 12, ac: true }
+  { id: 'v8', name: 'Bus (54+1)', seats: 55, ac/non ac: true }
 ];
 
 const localTrips = [
