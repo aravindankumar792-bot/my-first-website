@@ -35,7 +35,7 @@ const airportDrops = [
 ];
 
 const SHEET_API_URL =
-  "https://script.google.com/macros/s/AKfycbwkMsj7WUuhXBV6Cv0kP_JIfu2ujvvyXXN9V9U8oFdgLaYCNKOlAGN4OTIsMUZQcAEt/exec";
+  "https://script.google.com/macros/s/AKfycbz0OllDm0ZJkC-bQkvFtgYBO48tOJAJLxL5XF1Z4iMWUFATqA_4scI-UIrH96TpBi9i/exec";
 
 // Toast message
 function showToast(message, type = 'success') {
