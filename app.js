@@ -177,16 +177,20 @@ function bindNavToggle() {
 }
 
 // FILTER FLEET
-function filterFleet(e, type) {
+function filterFleet(event, type) {
   const cards = document.querySelectorAll('.fleet-card');
   const tabs = document.querySelectorAll('.fleet-tab');
 
-  tabs.forEach(t => t.classList.remove('active'));
-  e.target.classList.add('active');
+  tabs.forEach(tab => tab.classList.remove('active'));
+  event.target.classList.add('active');
 
   cards.forEach(card => {
-    const match = type === 'all' || card.dataset.category === type;
-    card.style.display = match ? 'block' : 'none';
+    const category = card.dataset.category;
+    if (type === 'all' || category === type) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
   });
 }
 
