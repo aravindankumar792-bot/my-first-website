@@ -276,3 +276,21 @@ textarea {
     padding: 8px 10px;
   }
 }
+/* Pricing Background Section */
+.pricing-bg {
+  background-image: url("images/pricing-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  /* Optional light blur glass effect */
+}
+
+.pricing-bg .card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 20px;
+}
