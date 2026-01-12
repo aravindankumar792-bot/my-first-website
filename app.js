@@ -6,7 +6,7 @@ const vehicles = [
   { id: 'v5', name: 'Toyota Innova (Prime SUV)', seats: 7, ac: true },
   { id: 'v6', name: 'Benze Tempo Traveller (11+1)', seats: 12, ac: true },
   { id: 'v7', name: 'Force Tempo Traveller (11+1)', seats: 12, ac: true }
-  { id: 'v8', name: 'Bus (54+1)', seats: 55, ac/non ac: true }
+  { id: 'v8', name: 'Bus (54+1)', seats: 55, ac: true }
 ];
 
 const localTrips = [
