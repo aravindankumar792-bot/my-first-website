@@ -1,11 +1,11 @@
 const vehicles = [
   { id: 'v1', name: 'Toyota Etios (Prime Sedan)', seats: 5, ac: true },
   { id: 'v2', name: 'Maruti Suzuki Dzire (Prime Sedan)', seats: 5, ac: true },
-  { id: 'v3', name: 'Maruti Suzuki Ertiga (Prime SUV)', seats: 8, ac: true },
-  { id: 'v4', name: 'Toyota Innova Crysta (Prime SUV)', seats: 8, ac: true },
-  { id: 'v5', name: 'Toyota Innova (Prime SUV)', seats: 8, ac: true },
-  { id: 'v6', name: 'Benze Tempo Traveller (12+1)', seats: 13, ac: true },
-  { id: 'v7', name: 'Force Tempo Traveller (12+1)', seats: 13, ac: true }
+  { id: 'v3', name: 'Maruti Suzuki Ertiga (Prime SUV)', seats: 7, ac: true },
+  { id: 'v4', name: 'Toyota Innova Crysta (Prime SUV)', seats: 7, ac: true },
+  { id: 'v5', name: 'Toyota Innova (Prime SUV)', seats: 7, ac: true },
+  { id: 'v6', name: 'Benze Tempo Traveller (12+1)', seats: 12, ac: true },
+  { id: 'v7', name: 'Force Tempo Traveller (12+1)', seats: 12, ac: true }
 ];
 
 const localTrips = [
