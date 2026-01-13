@@ -319,6 +319,27 @@ textarea {
 #booking textarea {
   height: 55px !important;
 }
+.tour-filter {
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: #e2e8f0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tour-filter.active {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.tour-item img {
+  height: 180px;
+  object-fit: cover;
+}
+
+#loadMoreBtn {
+  margin-top: 10px;
+}
 
 #booking button {
   padding: 6px !important;
