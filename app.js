@@ -112,10 +112,18 @@ function bindBookingForm() {
   const resetBtn = document.getElementById('booking-reset');
 
   paymentRadios.forEach(r => {
-    r.addEventListener('change', () => {
-      qrSection.classList.remove('hidden');
+  r.addEventListener('change', () => {
+    qrSection.classList.remove('hidden');
+
+    const advanceSelect = document.querySelector("select[name='advance']");
+    const upiBtn = document.getElementById("upi-pay-btn");
+
+    advanceSelect.addEventListener("change", () => {
+      const amount = advanceSelect.value;
+      upiBtn.href = `upi://pay?pa=yourupiid@oksbi&pn=SB%20Travels&am=${amount}&cu=INR&tn=Advance%20Booking`;
     });
   });
+});
 
   form.addEventListener('submit', e => {
     e.preventDefault();
