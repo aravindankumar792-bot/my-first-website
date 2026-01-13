@@ -514,22 +514,30 @@
         </div>
       </div>
     </section>
-    <section id="tourist" class="container mx-auto px-4">
-  <div class="card">
-    <div class="text-center mb-6">
-      <h2 class="section-title">Pondicherry Tourist Places</h2>
-      <p class="text-sm text-slate-500">Explore beaches • temples • Auroville spots • parks • museums</p>
-    </div>
+    <div class="card">
+  <div class="text-center mb-6">
+    <h2 class="section-title">Pondicherry Tourist Places</h2>
+    <p class="text-sm text-slate-500">Explore beaches • temples • Auroville spots • parks • museums</p>
+  </div>
 
-    <!-- CATEGORY FILTER BUTTONS -->
-    <div class="flex flex-wrap gap-2 mb-4 justify-center">
-      <button class="tour-filter active" onclick="filterTour('all')">All</button>
-      <button class="tour-filter" onclick="filterTour('beach')">Beaches</button>
-      <button class="tour-filter" onclick="filterTour('auroville')">Auroville</button>
-      <button class="tour-filter" onclick="filterTour('temple')">Temples</button>
-      <button class="tour-filter" onclick="filterTour('park')">Parks</button>
-      <button class="tour-filter" onclick="filterTour('museum')">Museums</button>
-    </div>
+  <!-- CATEGORY FILTER BUTTONS -->
+  <div class="flex flex-wrap gap-2 mb-4 justify-center">
+    <button class="tour-filter active" onclick="filterTour(event, 'all')">All</button>
+    <button class="tour-filter" onclick="filterTour(event, 'beach')">Beaches</button>
+    <button class="tour-filter" onclick="filterTour(event, 'auroville')">Auroville</button>
+    <button class="tour-filter" onclick="filterTour(event, 'temple')">Temples</button>
+    <button class="tour-filter" onclick="filterTour(event, 'park')">Parks</button>
+    <button class="tour-filter" onclick="filterTour(event, 'museum')">Museums</button>
+  </div>
+
+  <!-- RENDER GRID HERE -->
+  <div id="tour-grid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
+
+  <div class="text-center mt-6">
+    <button id="loadMoreBtn" class="btn-secondary" onclick="loadMoreTourist()">Load More</button>
+  </div>
+</div>
+
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
 
   <!-- 1 -->
