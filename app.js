@@ -214,6 +214,53 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+const touristPlaces = [
+  {
+    name: "Rock Beach",
+    img: "images/tourist/rock-beach.jpg",
+    category: "beach",
+    desc: "Popular rocky promenade perfect for sunrise walks.",
+    map: "https://goo.gl/maps/MrrVhA1p8eE9rzfH7"
+  },
+  {
+    name: "Paradise Beach",
+    img: "images/tourist/paradise.jpg",
+    category: "beach",
+    desc: "Golden sand beach accessible only by boat.",
+    map: "https://goo.gl/maps/8ny1s9xh1LK2"
+  },
+  {
+    name: "Serenity Beach",
+    img: "images/tourist/serenity.jpg",
+    category: "beach",
+    desc: "Calm beach famous for surfing.",
+    map: "https://goo.gl/maps/9HHF9FjEvxE2"
+  },
+  {
+    name: "Auroville Beach",
+    img: "images/tourist/auroville-beach.jpg",
+    category: "beach",
+    desc: "Peaceful beach near Auroville with clean water.",
+    map: "https://goo.gl/maps/GpwB47UnQVY9"
+  },
+  {
+    name: "Eden Beach",
+    img: "images/tourist/eden.jpg",
+    category: "beach",
+    desc: "Blue Flag certified beach with lifeguards.",
+    map: "https://goo.gl/maps/jcW5VXoykG32"
+  },
+  {
+    name: "Quiet Beach",
+    img: "images/tourist/quiet.jpg",
+    category: "beach",
+    desc: "Less crowded beach located on ECR.",
+    map: "https://goo.gl/maps/3U6w9Bf8eb62"
+  },
+
+  /* --- 44 More Places Below --- */
+  
+];
 
 
 
