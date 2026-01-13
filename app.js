@@ -221,70 +221,70 @@ const touristPlaces = [
     img: "images/rock-beach.jpg",
     category: "beach",
     desc: "Famous rocky promenade ideal for sunrise walks and evening relaxation.",
-    map: "https://goo.gl/maps/MrrVhA1p8eE9rzfH7"
+    map: "https://maps.app.goo.gl/UG8zCfhQpZZSHfSx5"
   },
   {
     name: "Paradise Beach",
     img: "images/paradise-beach.jpg",
     category: "beach",
     desc: "Golden sandy beach accessible by boat; perfect for families and swimming.",
-    map: "https://goo.gl/maps/8ny1s9xh1LK2"
+    map: "https://maps.app.goo.gl/fAxjMhMfmf81Qq8UA"
   },
   {
     name: "Serenity Beach",
     img: "images/serenity-beach.jpg",
     category: "beach",
     desc: "Quiet beach known for surfing and sunrise views.",
-    map: "https://goo.gl/maps/9HHF9FjEvxE2"
+    map: "https://maps.app.goo.gl/RgSheWxpx2i9Pdf4A"
   },
   {
     name: "Auroville Beach",
     img: "images/auroville-beach.jpg",
     category: "beach",
     desc: "Popular beach near Auroville, great for swimming and photography.",
-    map: "https://goo.gl/maps/a7ZrN9hoNQc5"
+    map: "https://maps.app.goo.gl/5gXqGj2dmJuPoRJj8"
   },
   {
     name: "Eden Beach",
     img: "images/eden-beach.jpg",
     category: "beach",
     desc: "Blue Flag certified beach known for safety, amenities, and coastal beauty.",
-    map: "https://goo.gl/maps/AXTJEeQKwhT2"
+    map: "https://maps.app.goo.gl/T3GkgD81PqB5CGRn6"
   },
   {
     name: "Quiet Beach",
     img: "images/quiet-beach.jpg",
     category: "beach",
     desc: "Less crowded shoreline ideal for peaceful walks.",
-    map: "https://goo.gl/maps/5AzDtumLspQ2"
+    map: "https://maps.app.goo.gl/RoNPW45vvpRx5bXW6"
   },
   {
     name: "Reppo Beach",
     img: "images/reppo-beach.jpg",
     category: "beach",
     desc: "Small yet clean beach near Auroville with scenic views.",
-    map: "https://goo.gl/maps/7X6gkACqgJM2"
+    map: "https://maps.app.goo.gl/woqGFh2PL9b1ytWM7"
   },
   {
     name: "Promenade North Beach",
     img: "images/north-beach.jpg",
     category: "beach",
     desc: "Extension of Rock Beach ideal for jogging and photos.",
-    map: "https://goo.gl/maps/8eViSp3w5G82"
+    map: "https://maps.app.goo.gl/82ajh6wnNZ1Gmk1C8"
   },
   {
     name: "Plage Paradiso",
     img: "images/plage-paradiso.jpg",
     category: "beach",
     desc: "Secluded sandbank connected by boat, great for family outings.",
-    map: "https://goo.gl/maps/8ny1s9xh1LK2"
+    map: "https://maps.app.goo.gl/nkoSFCBm64W13tZh9"
   },
   {
     name: "Veerampattinam Beach",
     img: "images/veerampattinam.jpg",
     category: "beach",
     desc: "Large beach famous for processions and festivals.",
-    map: "https://goo.gl/maps/MgSzEYy1Ypm"
+    map: "https://maps.app.goo.gl/HTXcNzh1BpywSWTf7"
   },
 
   // === AUROVILLE (10) ===
@@ -293,70 +293,70 @@ const touristPlaces = [
     img: "images/matrimandir.jpg",
     category: "auroville",
     desc: "Iconic golden sphere and meditation center — heart of Auroville.",
-    map: "https://goo.gl/maps/JAXRpEJdLUV2"
+    map: "https://maps.app.goo.gl/EaC4exK69wh7aatq6"
   },
   {
     name: "Auroville Visitors Centre",
     img: "images/visitors-center.jpg",
     category: "auroville",
     desc: "Information center with exhibitions, cafes, and craft shops.",
-    map: "https://goo.gl/maps/yE5nz1vJTkF2"
+    map: "https://maps.app.goo.gl/soXRKK98WaB6dosj6"
   },
   {
     name: "Sadhana Forest",
     img: "images/sadhana-forest.jpg",
     category: "auroville",
     desc: "Eco-community dedicated to reforestation and sustainable living.",
-    map: "https://goo.gl/maps/7sMAg3Mh2b72"
+    map: "https://maps.app.goo.gl/WZjfL414311MiXdJ6"
   },
   {
     name: "Auroville Beach Road",
     img: "images/auroville-road.jpg",
     category: "auroville",
     desc: "Scenic road connecting Auroville to the beach.",
-    map: "https://goo.gl/maps/9T9jQw4FhK92"
+    map: "https://maps.app.goo.gl/mre8LpaaKUfiHkKF9"
   },
   {
     name: "Auroville Botanical Garden",
     img: "images/auroville-garden.jpg",
     category: "auroville",
     desc: "Natural green campus with rare plants and eco-education.",
-    map: "https://goo.gl/maps/YHCDq8i8bWw"
+    map: "https://maps.app.goo.gl/yXycVuYyp1CAJ3Ha7"
   },
   {
     name: "Solitude Farm",
     img: "images/solitude-farm.jpg",
     category: "auroville",
     desc: "Organic farm with workshops and local food café.",
-    map: "https://goo.gl/maps/jNM8XZo9YFs"
+    map: "https://maps.app.goo.gl/kJGHhs7mEqszmxgdA"
   },
   {
     name: "Auroville Bakery",
     img: "images/auroville-bakery.jpg",
     category: "auroville",
     desc: "Famous bakery offering fresh breads, pastries, and European-style treats.",
-    map: "https://goo.gl/maps/ZFg7Nzy1AN92"
+    map: "https://maps.app.goo.gl/WDKb8Spf1x3QoVSx7"
   },
   {
     name: "Auroville Forest Trails",
     img: "images/auroville-forest.jpg",
     category: "auroville",
     desc: "Green walking trails ideal for nature lovers.",
-    map: "https://goo.gl/maps/5m6BtFwFhK52"
+    map: "https://maps.app.goo.gl/CMmSaftgsuwVZpKv7"
   },
   {
     name: "Auroville Amphitheatre",
     img: "images/auroville-amphi.jpg",
     category: "auroville",
     desc: "Open-air space hosting cultural and meditation events.",
-    map: "https://goo.gl/maps/8gJtNqXgL182"
+    map: "https://maps.app.goo.gl/mFAGms7ySwKqebNy9"
   },
   {
     name: "Unity Pavilion",
     img: "images/unity-pavilion.jpg",
     category: "auroville",
     desc: "Cultural center for exhibitions, meetings, and workshops.",
-    map: "https://goo.gl/maps/LDo4M8Dq7VG2"
+    map: "https://maps.app.goo.gl/BzwhdM3PKq2o4TtN8"
   },
 
   // === TEMPLES (10) ===
@@ -365,70 +365,70 @@ const touristPlaces = [
     img: "images/manakula.jpg",
     category: "temple",
     desc: "Historic Ganesha temple near the beach, known for blessings.",
-    map: "https://goo.gl/maps/wMf1qy2Mptn"
+    map: "https://maps.app.goo.gl/ewjnLcezfoFq2dQX7"
   },
   {
     name: "Vedapureeswarar Temple",
     img: "images/vedapureeswarar.jpg",
     category: "temple",
     desc: "Ancient Shiva temple located in the Tamil quarter.",
-    map: "https://goo.gl/maps/KL6QEzpVVgm"
+    map: "https://maps.app.goo.gl/9mzdCE8BqaVSjaaP8"
   },
   {
     name: "Pratyangira Devi Temple",
     img: "images/pratyangira.jpg",
     category: "temple",
     desc: "Powerful temple famous for homams and healing rituals.",
-    map: "https://goo.gl/maps/bB7FSWXsY8C2"
+    map: "https://maps.app.goo.gl/NaSYSQYXb5YY1xbT9"
   },
   {
     name: "Auroville Ilankaaliamman Temple",
     img: "images/isai-amman.jpg",
     category: "temple",
     desc: "Local goddess temple near Auroville forest area.",
-    map: "https://goo.gl/maps/sqmnZyA5v782"
+    map: "https://maps.app.goo.gl/hxcUTSFBFMEjJssS6"
   },
   {
     name: "Varadaraja Perumal Temple",
     img: "images/varadaraja.jpg",
     category: "temple",
     desc: "Famous Vishnu temple with Dravidian architecture.",
-    map: "https://goo.gl/maps/FAe2zJQ7p1Q2"
+    map: "https://maps.app.goo.gl/yMcL3ckRiKqbZSqi7"
   },
   {
     name: "Kamakchi Amman Temple",
     img: "images/kamakchi.jpg",
     category: "temple",
     desc: "Historic Amman temple with vibrant festivals.",
-    map: "https://goo.gl/maps/LQZCPXeYF3N2"
+    map: "https://maps.app.goo.gl/6SzGZnVegEXmLUmQ8"
   },
   {
     name: "Sithananda Swamy Temple",
     img: "images/sithananda.jpg",
     category: "temple",
     desc: "Famous spiritual center in Karuvadikuppam.",
-    map: "https://goo.gl/maps/Z9nbB4ruVmG2"
+    map: "https://maps.app.goo.gl/nufXWumwXobXi4bN8"
   },
   {
     name: "Arulmigu Muthumariamman Temple",
     img: "images/mariammam.jpg",
     category: "temple",
     desc: "Powerful temple dedicated to Mariamman deity.",
-    map: "https://goo.gl/maps/89Lb8Z7np7P2"
+    map: "https://maps.app.goo.gl/wVH7of6LdXdtMBNa6"
   },
   {
     name: "Sri Ayyappan Temple",
     img: "images/ayyappan.jpg",
     category: "temple",
     desc: "Popular pilgrimage spot following Kerala traditions.",
-    map: "https://goo.gl/maps/stnh1t9MMpr"
+    map: "https://maps.app.goo.gl/Y7yLLny2a1L7ka8V6"
   },
   {
     name: "Irumbai Maha Kaleshwarar Temple",
     img: "images/irumbai.jpg",
     category: "temple",
     desc: "Ancient Shiva temple near Auroville.",
-    map: "https://goo.gl/maps/LK4V5VdX3XH2"
+    map: "https://maps.app.goo.gl/fwGU5QwekCDDK2sU8"
   },
 
   // === PARKS & NATURE (10) ===
@@ -437,14 +437,14 @@ const touristPlaces = [
     img: "images/botanical-garden.jpg",
     category: "park",
     desc: "Large garden with musical fountain and rare plants.",
-    map: "https://goo.gl/maps/D5Qnr1EVmK12"
+    map: "https://maps.app.goo.gl/1Y5kzyCVuDACeKAQ9"
   },
   {
     name: "Bharathi Park",
     img: "images/bharathi-park.jpg",
     category: "park",
     desc: "Central park surrounded by heritage buildings.",
-    map: "https://goo.gl/maps/8w8tFhfvKJH2"
+    map: "https://maps.app.goo.gl/9r55n588572H8P4V7"
   },
   {
     name: "Rajiv Gandhi Statue Park",
@@ -458,49 +458,49 @@ const touristPlaces = [
     img: "images/science-park.jpg",
     category: "park",
     desc: "Interactive learning park for children and families.",
-    map: "https://goo.gl/maps/yTqK5tQL2t52"
+    map: "https://maps.app.goo.gl/ECGLwZ3tdQvid21V9"
   },
   {
     name: "Ousteri Lake",
     img: "images/ousteri.jpg",
     category: "park",
     desc: "Wetland reserve offering boating and birdwatching.",
-    map: "https://goo.gl/maps/dfsdgju89di"
+    map: "https://maps.app.goo.gl/QQFpgXCd8FNSBFfG8"
   },
   {
     name: "Chunnambar Backwaters",
     img: "images/backwaters.jpg",
     category: "park",
     desc: "Scenic boating spot near Paradise Beach.",
-    map: "https://goo.gl/maps/Z6uA8D9dY1S2"
+    map: "https://maps.app.goo.gl/hQVGYqQWsm8tdwkJ6"
   },
   {
     name: "Pondicherry Lighthouse Viewpoint",
     img: "images/lighthouse.jpg",
     category: "park",
     desc: "Tall lighthouse offering panoramic sea views.",
-    map: "https://goo.gl/maps/78S6zzY9FHn"
+    map: "https://maps.app.goo.gl/qH8xPNvohec5r9iy6"
   },
   {
     name: "Ariyankuppam River Bank",
     img: "images/riverbank.jpg",
     category: "park",
     desc: "Calm riverside location for photography.",
-    map: "https://goo.gl/maps/9QhCEXM1PZ92"
+    map: "https://maps.app.goo.gl/QTRSdSRcp9rTy2ha9"
   },
   {
     name: "Karaikal Beach Park",
     img: "images/karaikal-beach.jpg",
     category: "park",
     desc: "Family-friendly beach area with seating and food stalls.",
-    map: "https://goo.gl/maps/hszVRTjfvEq"
+    map: "https://maps.app.goo.gl/TohJFhcyNXQLReFX6"
   },
   {
     name: "Yanam Riverfront Park",
     img: "images/yanam-park.jpg",
     category: "park",
     desc: "Beautiful walkway along the Godavari river.",
-    map: "https://goo.gl/maps/s4weu9PFBM92"
+    map: "https://maps.app.goo.gl/oXbGwoSK9cHg5mSq7"
   },
 
   // === MUSEUMS & HERITAGE (10) ===
@@ -509,70 +509,70 @@ const touristPlaces = [
     img: "images/museum.jpg",
     category: "museum",
     desc: "Artifacts from Chola, Pallava, and French colonial periods.",
-    map: "https://goo.gl/maps/JzQCAJ9FjVQ2"
+    map: "https://maps.app.goo.gl/JR25zNE9fMbhRTjR7"
   },
   {
     name: "French War Memorial",
     img: "images/french-war.jpg",
     category: "museum",
     desc: "Historic memorial honoring WW1 soldiers.",
-    map: "https://goo.gl/maps/q6uX7tGgW6B2"
+    map: "https://maps.app.goo.gl/27aUQVYzG3DT9yMJ9"
   },
   {
     name: "Bharathiyar Museum",
     img: "images/bharathiyar.jpg",
     category: "museum",
     desc: "House of poet Subramania Bharathi with exhibits and manuscripts.",
-    map: "https://goo.gl/maps/xes8QbATj5w"
+    map: "https://maps.app.goo.gl/sRDJgYZWDXhbvGk28"
   },
   {
     name: "Jawahar Toy Museum",
     img: "images/toy-museum.jpg",
     category: "museum",
     desc: "Children’s museum with a large collection of dolls and toys.",
-    map: "https://goo.gl/maps/4GVFkF4oxxN2"
+    map: "https://maps.app.goo.gl/JR25zNE9fMbhRTjR7"
   },
   {
     name: "Chandannagar Museum",
     img: "images/chandannagar.jpg",
     category: "museum",
     desc: "Showcases the French colonial history of the region.",
-    map: "https://goo.gl/maps/5h8yPcG4dZ82"
+    map: "https://maps.app.goo.gl/Y4RLtZGHhzMny9Cw9"
   },
   {
     name: "Archaeological Museum",
     img: "images/archaeology.jpg",
     category: "museum",
     desc: "Exhibits ancient relics from Arikamedu and surrounding regions.",
-    map: "https://goo.gl/maps/2fW1Yp2M9qr"
+    map: "https://maps.app.goo.gl/hgDsTwpgAumgin697"
   },
   {
     name: "Arikamedu Ancient Port",
     img: "images/arikamedu.jpg",
     category: "museum",
     desc: "Archaeological site showing Roman trading settlement ruins.",
-    map: "https://goo.gl/maps/ad57s4YrYyA2"
+    map: "https://maps.app.goo.gl/W1SH3ES2GTxKxjUo8"
   },
   {
     name: "Gandhi Statue & Promenade",
     img: "images/gandhi.jpg",
     category: "museum",
     desc: "Iconic seafront landmark with history and open-air space.",
-    map: "https://goo.gl/maps/yN7jvV3xJXQ2"
+    map: "https://maps.app.goo.gl/cuoK6aAfHrFu7nsi9"
   },
   {
     name: "Old Lighthouse",
     img: "images/old-lighthouse.jpg",
     category: "museum",
     desc: "Historic lighthouse symbolizing colonial architecture.",
-    map: "https://goo.gl/maps/AG6kvp9SWNn"
+    map: "https://maps.app.goo.gl/h6JReaEWBJWYDjteA"
   },
   {
     name: "French Quarter Heritage Walk",
     img: "images/french-quarter.jpg",
     category: "museum",
     desc: "Walk through yellow colonial houses, cafes & churches.",
-    map: "https://goo.gl/maps/M6rdh6ZJh8n"
+    map: "https://maps.app.goo.gl/nr3TWUR4SMdjVkyLA"
   }
 ];
 let visiblePlaces = 12;
