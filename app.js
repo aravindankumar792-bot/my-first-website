@@ -382,7 +382,7 @@ const touristPlaces = [
     map: "https://goo.gl/maps/bB7FSWXsY8C2"
   },
   {
-    name: "Auroville Isai Amman Temple",
+    name: "Auroville Ilankaaliamman Temple",
     img: "images/tourist/isai-amman.jpg",
     category: "temple",
     desc: "Local goddess temple near Auroville forest area.",
@@ -396,8 +396,8 @@ const touristPlaces = [
     map: "https://goo.gl/maps/FAe2zJQ7p1Q2"
   },
   {
-    name: "Kamalakshi Amman Temple",
-    img: "images/tourist/kamalakshi.jpg",
+    name: "Kamakchi Amman Temple",
+    img: "images/tourist/kamakchi.jpg",
     category: "temple",
     desc: "Historic Amman temple with vibrant festivals.",
     map: "https://goo.gl/maps/LQZCPXeYF3N2"
