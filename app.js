@@ -530,7 +530,7 @@ const touristPlaces = [
     img: "images/toy-museum.jpg",
     category: "museum",
     desc: "Children’s museum with a large collection of dolls and toys.",
-    map: "https://maps.app.goo.gl/JR25zNE9fMbhRTjR7"
+    map: "https://maps.app.goo.gl/jA2pR1RnTFeCVkRb6"
   },
   {
     name: "Chandannagar Museum",
@@ -544,7 +544,7 @@ const touristPlaces = [
     img: "images/archaeology.jpg",
     category: "museum",
     desc: "Exhibits ancient relics from Arikamedu and surrounding regions.",
-    map: "https://maps.app.goo.gl/hgDsTwpgAumgin697"
+    map: "https://maps.app.goo.gl/fisWQJp2X8BZsFPk8"
   },
   {
     name: "Arikamedu Ancient Port",
