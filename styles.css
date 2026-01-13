@@ -332,11 +332,14 @@ textarea {
   color: #fff;
 }
 
-.tour-item img {
+.tour-item img,
+.fleet-img {
   height: 180px;
   object-fit: cover;
+  width: 100%;
 }
 
+/* Load more button spacing */
 #loadMoreBtn {
   margin-top: 10px;
 }
