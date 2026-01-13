@@ -157,11 +157,15 @@ textarea {
   transition: all 0.35s ease;
 }
 
-.fleet-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
+/* Global image fix for all grids */
+.fleet-img,
+.tour-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  background-color: #ffffff;
 }
 
 .fleet-card.hide {
@@ -330,12 +334,7 @@ textarea {
   color: #fff;
 }
 
-.tour-item img,
-.fleet-img {
-  height: 180px;
-  object-fit: cover;
-  width: 100%;
-}
+
 
 /* Load more button spacing */
 #loadMoreBtn {
