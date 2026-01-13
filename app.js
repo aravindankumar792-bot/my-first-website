@@ -581,7 +581,8 @@ function renderTourPlaces() {
   const grid = document.getElementById("tour-grid");
   grid.innerHTML = touristPlaces
     .slice(0, visiblePlaces)
-    .map(place => `
+    .map(
+      place => `
       <div class="fleet-card tour-item" data-category="${place.category}">
         <img src="${place.img}" class="fleet-img">
         <div class="p-4">
@@ -591,38 +592,36 @@ function renderTourPlaces() {
             View on Google Maps
           </a>
         </div>
-      </div>
-    `)
+      </div>`
+    )
     .join("");
 }
 
 function loadMoreTourist() {
   visiblePlaces += 12;
   renderTourPlaces();
-
   if (visiblePlaces >= touristPlaces.length) {
     document.getElementById("loadMoreBtn").style.display = "none";
   }
 }
 
-function filterTour(category) {
-  const items = document.querySelectorAll('.tour-item');
-  const buttons = document.querySelectorAll('.tour-filter');
+function filterTour(event, category) {
+  const items = document.querySelectorAll(".tour-item");
+  const filters = document.querySelectorAll(".tour-filter");
 
-  buttons.forEach(btn => btn.classList.remove('active'));
-
-  event.target.classList.add('active');
+  filters.forEach(btn => btn.classList.remove("active"));
+  event.target.classList.add("active");
 
   items.forEach(item => {
-    if (category === "all" || item.dataset.category === category) {
-      item.style.display = "block";
-    } else {
-      item.style.display = "none";
-    }
+    item.style.display =
+      category === "all" || item.dataset.category === category
+        ? "block"
+        : "none";
   });
 }
 
 document.addEventListener("DOMContentLoaded", renderTourPlaces);
+
 
 
 
