@@ -120,7 +120,7 @@ function bindBookingForm() {
 
     advanceSelect.addEventListener("change", () => {
       const amount = advanceSelect.value;
-      upiBtn.href = `upi://pay?pa=auroaravindan-1@okhdfcbank&pn=auro%20Aravindan&am=${amount}&cu=INR&tn=Advance%20Booking`;
+      upiBtn.href = `upi://pay?pa=auroaravindan-1@okhdfcbank&pn=%20Aravindan&am=${amount}&cu=INR&tn=Advance%20Booking`;
     });
   });
 });
