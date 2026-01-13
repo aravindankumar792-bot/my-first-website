@@ -120,7 +120,7 @@ function bindBookingForm() {
 
     advanceSelect.addEventListener("change", () => {
       const amount = advanceSelect.value;
-      upiBtn.href = `upi://pay?pa=yourupiid@oksbi&pn=SB%20Travels&am=${amount}&cu=INR&tn=Advance%20Booking`;
+      upiBtn.href = `upi://pay?pa=auroaravindan-1@okhdfcbank&pn=SB%20Travels&am=${amount}&cu=INR&tn=Advance%20Booking`;
     });
   });
 });
@@ -130,6 +130,15 @@ function bindBookingForm() {
     const fd = new FormData(form);
 
     const data = Object.fromEntries(fd.entries());
+    // AUTO SET ADVANCE BASED ON TRIP TYPE
+const pickup = data.pickup.toLowerCase();
+const drop = data.drop.toLowerCase();
+
+if (pickup === drop) {
+  data.advance = "500";  // LOCAL TRIP
+} else {
+  data.advance = "1000"; // OUTSTATION TRIP
+}
 
     const params = new URLSearchParams(data);
 
