@@ -294,23 +294,33 @@ textarea {
   border-radius: 14px;
   padding: 20px;
 }
-/* Reduce space in Quick Booking section */
+/* Make booking form smaller - medium level */
 #booking {
-  padding: 16px !important;      /* reduce inner padding */
-  margin-top: 20px !important;   /* reduce top gap */
-  border-radius: 14px !important;
+  padding: 10px !important;
 }
 
 #booking .form-label {
-  font-size: 0.8rem !important;  /* smaller label text */
+  font-size: 0.75rem !important;
+  margin-bottom: 2px !important;
 }
 
 #booking .form-input {
-  padding: 8px 10px !important;  /* reduce input height */
-  font-size: 0.9rem !important;
+  padding: 6px 8px !important;
+  font-size: 0.85rem !important;
+  height: 34px !important;
+}
+
+#booking select.form-input,
+#booking textarea.form-input {
+  padding: 6px 8px !important;
+  font-size: 0.85rem !important;
+}
+
+#booking textarea {
+  height: 55px !important;
 }
 
 #booking button {
-  padding: 8px !important;       /* smaller buttons */
-  font-size: 0.9rem !important;
+  padding: 6px !important;
+  font-size: 0.85rem !important;
 }
